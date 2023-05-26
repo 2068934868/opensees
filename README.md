@@ -19,12 +19,12 @@
 </div>
 
 建模TCL代码如下：
-```tcl
 
+<details>
+  <summary>点击点开/折叠</summary>
+```tcl
 wipe
 ##清除整个系统
-<details>
-  <summary>标题</summary>
 puts "System"
 model basic -ndm 3 -ndf 6
 ##建立系统维度，每个坐标点ndm有3个方向的维度，ndf有6个方向的自由度，桁架结构这里要修改为3
@@ -197,8 +197,9 @@ algorithm Newton
 integrator LoadControl 1.000E-002
 analysis Static
 analyze 100
-</details>
 ```
+</details>
+
 node5的opensees计算结果与etabs的计算结果对比如图所示。
 <div align="center">
 <img src="https://github.com/2068934868/image/blob/24c75f5be5296b1c1fad6d6784f5ec36ce760352/opensees/01-3.png">
