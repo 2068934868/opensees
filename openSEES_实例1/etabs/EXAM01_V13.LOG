@@ -6,7 +6,7 @@
 
 
 
- B E G I N   A N A L Y S I S                                2023/05/26  17:48:11
+ B E G I N   A N A L Y S I S                                2023/05/26  20:03:16
 
 
  RUNNING ANALYSIS AS A SEPARATE PROCESS
@@ -37,11 +37,11 @@
  NUMBER OF THREADS: FORM (AUTOMATIC)       =          16
 
 
- E L E M E N T   F O R M A T I O N                                      17:48:11
+ E L E M E N T   F O R M A T I O N                                      20:03:16
 
 
 
- L I N E A R   E Q U A T I O N   S O L U T I O N                        17:48:11
+ L I N E A R   E Q U A T I O N   S O L U T I O N                        20:03:16
 
  FORMING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
 
@@ -68,7 +68,7 @@
 
 
 
- L I N E A R   S T A T I C   C A S E S                                  17:48:11
+ L I N E A R   S T A T I C   C A S E S                                  20:03:16
 
  USING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
 
@@ -84,7 +84,7 @@
  CASE: ~CHINESEY
 
 
- E I G E N   M O D A L   A N A L Y S I S                                17:48:11
+ E I G E N   M O D A L   A N A L Y S I S                                20:03:16
 
  CASE: MODAL
 
@@ -107,28 +107,28 @@
  Number of eigenvalues below shift =      1
 
  Iteration    Approximations to next 5 eigenvalues, from shift EV= 0.0000000E+00
-       2  -1.5598077E-11 3.5173801E-11-1.1089631E-10 3.5314512E-09 2.5466952E-08
+       1   3.8867903E-12-8.5005620E-12 1.0386351E-11 1.3278764E-11-1.5245349E-11
+       3  -1.5245349E-11 1.3527928E+02 2.0744565E+02 2.7264651E+02 3.0758693E+02
 
- Found mode      1 of     12:  EV=-1.5598077E-11, f=   -6.29E-07, T= -1.5909E+06
+ Found mode      1 of     12:  EV=-1.5245349E-11, f=   -6.21E-07, T= -1.6092E+06
 
  Iteration    Approximations to next 5 eigenvalues, from shift EV= 0.0000000E+00
-       4   1.5718420E+02 4.7018744E+03 8.0005991E+03 2.3849590E+04 2.6353447E+04
-       5   3.1868274E-01 4.7015733E+03 8.0005982E+03 2.3813373E+04 2.6343204E+04
-       6   7.4247130E-04 4.7015730E+03 8.0005981E+03 2.3813283E+04 2.6343193E+04
+       4   8.4252569E+02 4.7025085E+03 8.0006630E+03 2.3869913E+04 2.6343224E+04
+       5   1.8845005E+01 4.7016200E+03 8.0005990E+03 2.3814221E+04 2.6343200E+04
+       7   3.4712909E-01 4.7015733E+03 8.0005981E+03 2.3813348E+04 2.6343193E+04
+       8   3.5128368E-03 4.7015730E+03 8.0005981E+03 2.3813283E+04 2.6343193E+04
+       9   1.0015643E-04 4.7015730E+03 8.0005981E+03 2.3813283E+04 2.6343193E+04
 
- Forming stiffness, new shift: EV= 7.0534773E-04, f=    0.004227, T=  236.580112
+ Forming stiffness, new shift: EV= 9.5148603E-05, f=    0.001552, T=  644.137613
  Number of eigenvalues below shift =      1
 
- Iteration    Approximations to next 5 eigenvalues, from shift EV= 7.0534773E-04
-       8   4.7015723E+03 8.0005974E+03 2.3813282E+04 2.6343192E+04 4.8389754E+04
+ Iteration    Approximations to next 5 eigenvalues, from shift EV= 9.5148603E-05
+      10   4.7015729E+03 8.0005980E+03 2.3813283E+04 2.6343193E+04 4.8389755E+04
+      11   4.7015729E+03 8.0005980E+03 2.3813283E+04 2.6343193E+04 4.8389755E+04
 
  Found mode      2 of     12:  EV= 4.7015730E+03, f=   10.912939, T=    0.091634
  Found mode      3 of     12:  EV= 8.0005981E+03, f=   14.235783, T=    0.070246
  Found mode      4 of     12:  EV= 2.3813283E+04, f=   24.560080, T=    0.040716
-
- Iteration    Approximations to next 5 eigenvalues, from shift EV= 7.0534773E-04
-       9   2.6343192E+04 4.8389754E+04 5.8863332E+04 1.0356785E+05 3.1984530E+05
-
  Found mode      5 of     12:  EV= 2.6343193E+04, f=   25.831780, T=    0.038712
  Found mode      6 of     12:  EV= 4.8389755E+04, f=   35.010382, T=    0.028563
  Found mode      7 of     12:  EV= 5.8863333E+04, f=   38.613801, T=    0.025897
@@ -153,8 +153,8 @@
 
 
  NUMBER OF EIGEN MODES FOUND               =          12
- NUMBER OF ITERATIONS PERFORMED            =           9
+ NUMBER OF ITERATIONS PERFORMED            =          12
  NUMBER OF STIFFNESS SHIFTS                =           1
 
 
- A N A L Y S I S   C O M P L E T E                          2023/05/26  17:48:11
+ A N A L Y S I S   C O M P L E T E                          2023/05/26  20:03:16

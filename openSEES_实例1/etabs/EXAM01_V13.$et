@@ -1,4 +1,4 @@
-$ File E:\GitHub\opensees\opensees\openSEES_实例1\etabs\EXAM01_V13.$et saved 2023/5/26 17:48:06
+$ File E:\GitHub\opensees\opensees\openSEES_实例1\etabs\EXAM01_V13.$et saved 2023/5/26 20:04:26
  
 $ PROGRAM INFORMATION
   PROGRAM  "ETABS"  VERSION "20.3.0"  
@@ -48,6 +48,10 @@ $ MATERIAL PROPERTIES
   MATERIAL  "A615Gr60"    SYMTYPE "Uniaxial"  E 199948  A 1.16999999590917E-05
   MATERIAL  "A615Gr60"  FY 413.6855  FU 620.5282 FYE 455.054  FUE 682.5811
   MATERIAL  "A615Gr60"  HYSTYPE "Kinematic"  SSTYPE "Simple"  STRAINATHARDENING 0.01 STRAINATULTIMATE 0.09 FINALSLOPE -0.1 IOTENSION 0.01 LSTENSION 0.02 CPTENSION 0.05 IOCOMPRESSION 0.005 LSCOMPRESSION 0.01 CPCOMPRESSION 0.02 
+  MATERIAL  "A416Gr270"    TYPE "Tendon"    GRADE "Grade 270"    WEIGHTPERVOLUME 7.697286E-05
+  MATERIAL  "A416Gr270"    SYMTYPE "Uniaxial"  E 196500.6  A 1.16999999590917E-05
+  MATERIAL  "A416Gr270"  FY 1689.905  FU 1861.585
+  MATERIAL  "A416Gr270"  HYSTYPE "Kinematic"  SSTYPE "270ksi"  FINALSLOPE -0.1 IOTENSION 0.015 LSTENSION 0.023 CPTENSION 0.03 IOCOMPRESSION 0.015 LSCOMPRESSION 0.023 CPCOMPRESSION 0.03 
 
 $ REBAR DEFINITIONS
   REBARDEFINITION  "#2"  AREA  32.258 DIA  6.35 
@@ -349,6 +353,19 @@ $ LOG
   STARTCOMMENTS  
 
 ETABS Ultimate C  20.3.0 File saved as E:\GitHub\opensees\opensees\openSEES_实例1\etabs\EXAM01_V13.EDB at 2023/5/26 17:48:06
+ETABS Ultimate C  20.3.0 File saved as E:\GitHub\opensees\opensees\openSEES_实例1\etabs\EXAM01_V13.EDB at 2023/5/26 17:48:10
+ETABS Ultimate C  20.3.0 File saved as E:\GitHub\opensees\opensees\openSEES_实例1\etabs\EXAM01_V13.EDB at 2023/5/26 17:48:10
+ETABS Ultimate C  20.3.0 File saved as E:\GitHub\opensees\opensees\openSEES_实例1\etabs\EXAM01_V13.EDB at 2023/5/26 17:48:13
+ETABS Ultimate C  20.3.0 File saved as E:\GitHub\opensees\opensees\openSEES_实例1\etabs\EXAM01_V13.EDB at 2023/5/26 20:01:33
+ETABS Ultimate C  20.3.0 File saved as E:\GitHub\opensees\opensees\openSEES_实例1\etabs\EXAM01_V13.EDB at 2023/5/26 20:01:56
+ETABS Ultimate C  20.3.0 File saved as E:\GitHub\opensees\opensees\openSEES_实例1\etabs\EXAM01_V13.EDB at 2023/5/26 20:02:08
+ETABS Ultimate C  20.3.0 File saved as E:\GitHub\opensees\opensees\openSEES_实例1\etabs\EXAM01_V13.EDB at 2023/5/26 20:02:32
+ETABS Ultimate C  20.3.0 File saved as E:\GitHub\opensees\opensees\openSEES_实例1\etabs\EXAM01_V13.EDB at 2023/5/26 20:02:35
+ETABS Ultimate C  20.3.0 File saved as E:\GitHub\opensees\opensees\openSEES_实例1\etabs\EXAM01_V13.EDB at 2023/5/26 20:03:12
+ETABS Ultimate C  20.3.0 File saved as E:\GitHub\opensees\opensees\openSEES_实例1\etabs\EXAM01_V13.EDB at 2023/5/26 20:03:15
+ETABS Ultimate C  20.3.0 File saved as E:\GitHub\opensees\opensees\openSEES_实例1\etabs\EXAM01_V13.EDB at 2023/5/26 20:03:15
+ETABS Ultimate C  20.3.0 File saved as E:\GitHub\opensees\opensees\openSEES_实例1\etabs\EXAM01_V13.EDB at 2023/5/26 20:03:18
+ETABS Ultimate C  20.3.0 File saved as E:\GitHub\opensees\opensees\openSEES_实例1\etabs\EXAM01_V13.EDB at 2023/5/26 20:04:26
   ENDCOMMENTS  
 
   END
