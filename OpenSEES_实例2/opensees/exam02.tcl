@@ -196,6 +196,7 @@ element elasticBeamColumn 51 21 22 1.200E+005 3.250E+004 1.354E+004 1.264E+009 3
 element elasticBeamColumn 52 23 24 1.200E+005 3.250E+004 1.354E+004 1.264E+009 3.600E+009 4.000E+008 52
 puts "recorder"
 recorder Node -file node0.out -time -nodeRange 1 38 -dof 1 2 3 disp
+recorder Node -file node4.out -time -node 4 -dof 1 2 3 disp
 recorder Element -file ele0.out -time -eleRange 1 52 localForce
 recorder Node -file story_disp.out -time -nodeRange 35 38 -dof 2 disp
 puts "loading"
@@ -212,6 +213,6 @@ numberer Plain
 system BandGeneral
 test EnergyIncr 1.0e-6 200
 algorithm Newton
-integrator LoadControl 1.000E-002
+integrator LoadControl 0.1
 analysis Static
-analyze 100
+analyze 10
