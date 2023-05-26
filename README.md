@@ -196,5 +196,5 @@ analyze 100
 ```
 node5的opensees计算结果与etabs的计算结果对比如图所示。
 <div align="center">
-<img src="https://github.com/2068934868/image/blob/1c633267de126e311ea9da8f061a51174bd6c0ed/opensees/01-3.png">
+<img src="https://github.com/2068934868/image/blob/24c75f5be5296b1c1fad6d6784f5ec36ce760352/opensees/01-3.png">
 </div>
