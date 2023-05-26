@@ -209,7 +209,7 @@ node5的opensees计算结果与etabs的计算结果对比如图所示。
 ### 实例02-多层框架结构静力分析
 本例是一个四层的框架结构（梁柱结构）受风荷载（楼层荷载）的作用的静力分析，如图所示。本例主要演示OPENSEES弹性梁柱单元的建模与分析过程。结构模型尺寸如图所示。梁截面为200x600及400x600。柱截面为400x400和600x600，梁柱均采用C40。风荷载信息：B类场地，基本风压为0.50kN/m2，风荷载为Y方向。附加恒载为1.5kN/m2，活载为2.0kN/m2，楼板厚度为100mm。求风荷载作用下，结构的变形。
 <div align="center">
-<img src="https://github.com/2068934868/image/blob/24c75f5be5296b1c1fad6d6784f5ec36ce760352/opensees/02-1.png">
+<img src="https://github.com/2068934868/image/blob/0aaee1d6ef3483a41fed110081c8bcba92211a3b/opensees/02-1.png">
 </div>
 
 建模TCL代码如下：
