@@ -433,13 +433,13 @@ analyze 10
 </div>
 由上图看出，opensees与etabs计算结果不同，原因是opensees梁截面采用的是伯努利梁，etabs采用的是铁木辛柯梁。其中伯努利梁是不考虑抗剪强度的，在etabs中调整如下图所示。
 <div align="center">
-<img src="https://github.com/2068934868/image/blob/24c75f5be5296b1c1fad6d6784f5ec36ce760352/opensees/02-3.png">
+<img src="https://github.com/2068934868/image/blob/0aaee1d6ef3483a41fed110081c8bcba92211a3b/opensees/02-3.png">
 </div>
 结果如下：
 <div align="center">
-<img src="https://github.com/2068934868/image/blob/24c75f5be5296b1c1fad6d6784f5ec36ce760352/opensees/02-4.png">
+<img src="https://github.com/2068934868/image/blob/0aaee1d6ef3483a41fed110081c8bcba92211a3b/opensees/02-4.png">
 </div>
 楼层位移对比如下：
 <div align="center">
-<img src="https://github.com/2068934868/image/blob/24c75f5be5296b1c1fad6d6784f5ec36ce760352/opensees/02-5.png">
+<img src="opensees/02-4.png">
 </div>
