@@ -21,7 +21,8 @@
 建模TCL代码如下：
 
 <details>
-  <summary>点击点开/折叠</summary>
+  <summary>点击展开/折叠代码区</summary>
+
 ```tcl
 wipe
 ##清除整个系统
@@ -212,6 +213,9 @@ node5的opensees计算结果与etabs的计算结果对比如图所示。
 </div>
 
 建模TCL代码如下：
+<details>
+  <summary>点击展开/折叠代码区</summary>
+
 ```tcl
 wipe
 puts "System"
@@ -432,6 +436,9 @@ integrator LoadControl 0.1
 analysis Static
 analyze 10
 ```
+
+<details>
+
 框架顶点位移的opensees以及etabs的计算结果对比如下图所示。
 <div align="center">
 <img src="https://github.com/2068934868/image/blob/0aaee1d6ef3483a41fed110081c8bcba92211a3b/opensees/02-2.png">
