@@ -6,6 +6,7 @@
   - [OpenSees实例](#opensees实例)
     - [实例01-桁架桥结构静力分析](#实例01-桁架桥结构静力分析)
     - [实例02-多层框架结构静力分析](#实例02-多层框架结构静力分析)
+    - [实例03-简支梁弹塑性分析](#实例03-简支梁弹塑性分析)
 
 ## OpenSees实例
 ### 实例01-桁架桥结构静力分析
@@ -436,8 +437,7 @@ integrator LoadControl 0.1
 analysis Static
 analyze 10
 ```
-
-<details>
+</details>
 
 框架顶点位移的opensees以及etabs的计算结果对比如下图所示。
 <div align="center">
@@ -454,4 +454,187 @@ analyze 10
 楼层位移对比如下：
 <div align="center">
 <img src="https://github.com/2068934868/image/blob/0aaee1d6ef3483a41fed110081c8bcba92211a3b/opensees/02-5.png">
+</div>
+
+### 实例03-简支梁弹塑性分析
+本例是第一个弹塑性分析的例子，OpenSEES的其中一个强项就是采用宏观单元对结构进行弹塑性分析。简支梁结构模型如下图所示，简支梁长度为3000mm，划分成6段。截面为矩形混凝土截面，截面与配筋如下图所示，混凝土与钢材的材料本构如下图所示。求解在均布荷载作用下，采用位移控制，查看结构的整个位移-荷载曲线。
+
+首先，在做本例之前，做一个受到轴向压力的混凝土柱，并对其做push分析。
+
+<div align="center">
+<img src="">
+</div>
+
+建模TCL代码如下：
+<details>
+  <summary>点击展开/折叠代码区</summary>
+
+```tcl
+wipe
+puts "System"
+model basic -ndm 3 -ndf 6
+puts "restraint"
+node 1 0.000E+000 0.000E+000 0.000E+000
+node 2 0.000E+000 0.000E+000 3.000E+003
+puts "rigidDiaphragm"
+puts "mass"
+puts "node"
+fix 1 1 1 1 1 1 1;
+puts "Equal DOF"
+puts "material"
+##uniaxialMaterial Elastic 1 3.000E+004
+##uniaxialMaterial Elastic 2 2.100E+005
+##uniaxialMaterial Elastic 3 1.950E+005
+##uniaxialMaterial Elastic 4 2.060E+005
+##上述都是线性材料，算出来的pushover曲线是一条直线
+
+uniaxialMaterial Steel01 2 335 200000 0.00001
+uniaxialMaterial Concrete01 1 -26.8 -0.002 -15 -0.006
+
+##NC500*500 
+section Fiber 2 -GJ 1.100E+014 {
+fiber -2.188E+002 -2.188E+002 3.906E+003 1
+fiber -1.563E+002 -2.188E+002 3.906E+003 1
+fiber -9.375E+001 -2.188E+002 3.906E+003 1
+fiber -3.125E+001 -2.188E+002 3.906E+003 1
+fiber 3.125E+001 -2.188E+002 3.906E+003 1
+fiber 9.375E+001 -2.188E+002 3.906E+003 1
+fiber 1.563E+002 -2.188E+002 3.906E+003 1
+fiber 2.188E+002 -2.188E+002 3.906E+003 1
+fiber -2.188E+002 -1.563E+002 3.906E+003 1
+fiber -1.563E+002 -1.563E+002 3.906E+003 1
+fiber -9.375E+001 -1.563E+002 3.906E+003 1
+fiber -3.125E+001 -1.563E+002 3.906E+003 1
+fiber 3.125E+001 -1.563E+002 3.906E+003 1
+fiber 9.375E+001 -1.563E+002 3.906E+003 1
+fiber 1.563E+002 -1.563E+002 3.906E+003 1
+fiber 2.188E+002 -1.563E+002 3.906E+003 1
+fiber -2.188E+002 -9.375E+001 3.906E+003 1
+fiber -1.563E+002 -9.375E+001 3.906E+003 1
+fiber -9.375E+001 -9.375E+001 3.906E+003 1
+fiber -3.125E+001 -9.375E+001 3.906E+003 1
+fiber 3.125E+001 -9.375E+001 3.906E+003 1
+fiber 9.375E+001 -9.375E+001 3.906E+003 1
+fiber 1.563E+002 -9.375E+001 3.906E+003 1
+fiber 2.188E+002 -9.375E+001 3.906E+003 1
+fiber -2.188E+002 -3.125E+001 3.906E+003 1
+fiber -1.563E+002 -3.125E+001 3.906E+003 1
+fiber -9.375E+001 -3.125E+001 3.906E+003 1
+fiber -3.125E+001 -3.125E+001 3.906E+003 1
+fiber 3.125E+001 -3.125E+001 3.906E+003 1
+fiber 9.375E+001 -3.125E+001 3.906E+003 1
+fiber 1.563E+002 -3.125E+001 3.906E+003 1
+fiber 2.188E+002 -3.125E+001 3.906E+003 1
+fiber -2.188E+002 3.125E+001 3.906E+003 1
+fiber -1.563E+002 3.125E+001 3.906E+003 1
+fiber -9.375E+001 3.125E+001 3.906E+003 1
+fiber -3.125E+001 3.125E+001 3.906E+003 1
+fiber 3.125E+001 3.125E+001 3.906E+003 1
+fiber 9.375E+001 3.125E+001 3.906E+003 1
+fiber 1.563E+002 3.125E+001 3.906E+003 1
+fiber 2.188E+002 3.125E+001 3.906E+003 1
+fiber -2.188E+002 9.375E+001 3.906E+003 1
+fiber -1.563E+002 9.375E+001 3.906E+003 1
+fiber -9.375E+001 9.375E+001 3.906E+003 1
+fiber -3.125E+001 9.375E+001 3.906E+003 1
+fiber 3.125E+001 9.375E+001 3.906E+003 1
+fiber 9.375E+001 9.375E+001 3.906E+003 1
+fiber 1.563E+002 9.375E+001 3.906E+003 1
+fiber 2.188E+002 9.375E+001 3.906E+003 1
+fiber -2.188E+002 1.563E+002 3.906E+003 1
+fiber -1.563E+002 1.563E+002 3.906E+003 1
+fiber -9.375E+001 1.563E+002 3.906E+003 1
+fiber -3.125E+001 1.563E+002 3.906E+003 1
+fiber 3.125E+001 1.563E+002 3.906E+003 1
+fiber 9.375E+001 1.563E+002 3.906E+003 1
+fiber 1.563E+002 1.563E+002 3.906E+003 1
+fiber 2.188E+002 1.563E+002 3.906E+003 1
+fiber -2.188E+002 2.188E+002 3.906E+003 1
+fiber -1.563E+002 2.188E+002 3.906E+003 1
+fiber -9.375E+001 2.188E+002 3.906E+003 1
+fiber -3.125E+001 2.188E+002 3.906E+003 1
+fiber 3.125E+001 2.188E+002 3.906E+003 1
+fiber 9.375E+001 2.188E+002 3.906E+003 1
+fiber 1.563E+002 2.188E+002 3.906E+003 1
+fiber 2.188E+002 2.188E+002 3.906E+003 1
+fiber -2.150E+002 -2.150E+002 4.906E+002 2
+fiber -1.075E+002 -2.150E+002 4.906E+002 2
+fiber 0.000E+000 -2.150E+002 4.906E+002 2
+fiber 1.075E+002 -2.150E+002 4.906E+002 2
+fiber 2.150E+002 -2.150E+002 4.906E+002 2
+fiber -2.150E+002 2.150E+002 4.906E+002 2
+fiber -1.075E+002 2.150E+002 4.906E+002 2
+fiber 0.000E+000 2.150E+002 4.906E+002 2
+fiber 1.075E+002 2.150E+002 4.906E+002 2
+fiber 2.150E+002 2.150E+002 4.906E+002 2
+fiber -2.150E+002 -1.075E+002 4.906E+002 2
+fiber -2.150E+002 0.000E+000 4.906E+002 2
+fiber -2.150E+002 1.075E+002 4.906E+002 2
+fiber 2.150E+002 -1.075E+002 4.906E+002 2
+fiber 2.150E+002 0.000E+000 4.906E+002 2
+fiber 2.150E+002 1.075E+002 4.906E+002 2
+}
+
+puts "transformation"
+geomTransf Linear 1 1.000 0.000 0.000 
+puts "element"
+element nonlinearBeamColumn 1 1 2 3 2 1
+puts "shell element"
+puts "SOLID element"
+puts "recorder"
+puts "gravity"
+## Load Case = DEAD
+pattern Plain 1 Linear {
+load 2 0.000E+000 0.000E+000 -1.500E+006 0.000E+000 0.000E+000 0.000E+000
+##注意：如果把这里的轴力逐渐增大，会发现push的荷载逐渐增大
+}
+puts "analysis"
+constraints Plain
+numberer Plain
+system BandGeneral
+test EnergyIncr 1.0e-6 200
+algorithm Newton
+integrator LoadControl 1.000E-002
+analysis Static
+analyze 10
+
+recorder Node -file node2.out -time -node 2 -dof 1 2 3 disp
+##首先加了dead工况的竖向力，然后在此处先输出一个顶部节点的位移。
+loadConst 0.0
+##恒定上述荷载，使其能延续至后续工况。
+
+puts "pushover"
+## Load Case = PUSH
+pattern Plain 3 Linear {
+load 2 1.000E+003 0.000E+000 0.000E+000 0.000E+000 0.000E+000 0.000E+000
+}
+puts "analysis"
+constraints Plain
+numberer Plain
+system BandGeneral
+test EnergyIncr 1.0e-6 200
+algorithm Newton
+integrator DisplacementControl 2 1 1.000E+000
+analysis Static
+analyze 100
+
+```
+</details>
+
+在eto进行框架截面非线性设置时，其中rebar setting中的钢筋面积指的是X方向以及Y方向顶部或者底部（或者左侧或者右侧，即一半）的钢筋总面积，divide代表将截面分成多少份，Bar Num代表该方向顶部或底部有多少根钢筋。
+
+<div align="center">
+<img src="">
+</div>
+
+下图为弹性材料的push曲线，可以看出，此处采用的是弹性分析，其曲线是一条直线。
+
+<div align="center">
+<img src="">
+</div>
+
+下图为设置了非线性材料后的push曲线，可以看出，其进入了非线性。
+
+<div align="center">
+<img src="">
 </div>

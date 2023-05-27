@@ -1,0 +1,720 @@
+File E:\GitHub\opensees\opensees\OpenSEES_实例3\opensees\model3.s2k was saved on m/d/yy at h:mm:ss
+ 
+TABLE:  "PROGRAM CONTROL"
+   ProgramName=SAP2000   Version=23.1.0   ProgLevel=Ultimate   LicenseNum=3010*15EHMCXD99FVCPU   LicenseOS=Yes   LicenseSC=Yes   LicenseHT=No   CurrUnits="N, mm, C"   SteelCode="AISC 360-16"   ConcCode="ACI 318-14"   AlumCode="AA 2015" _
+        ColdCode=AISI-16   RegenHinge=Yes
+ 
+TABLE:  "ACTIVE DEGREES OF FREEDOM"
+   UX=Yes   UY=Yes   UZ=Yes   RX=Yes   RY=Yes   RZ=Yes
+ 
+TABLE:  "ANALYSIS OPTIONS"
+   Solver=Advanced   SolverProc=Auto   Force32Bit=No   StiffCase=None   GeomMod=None   HingeOpt="In Elements"   NumAThreads=0   MaxFileSize=0   UseMMFiles="Program Determined"   AllowDiff=No
+ 
+TABLE:  "COORDINATE SYSTEMS"
+   Name=GLOBAL   Type=Cartesian   X=0   Y=0   Z=0   AboutZ=0   AboutY=0   AboutX=0
+ 
+TABLE:  "GRID LINES"
+   CoordSys=GLOBAL   AxisDir=X   GridID=A   XRYZCoord=0   LineType=Primary   LineColor=Gray8Dark   Visible=Yes   BubbleLoc=End   AllVisible=Yes   BubbleSize=1250
+   CoordSys=GLOBAL   AxisDir=X   GridID=B   XRYZCoord=1000   LineType=Primary   LineColor=Gray8Dark   Visible=Yes   BubbleLoc=End
+   CoordSys=GLOBAL   AxisDir=Y   GridID=2   XRYZCoord=0   LineType=Primary   LineColor=Gray8Dark   Visible=Yes   BubbleLoc=Start
+   CoordSys=GLOBAL   AxisDir=Y   GridID=3   XRYZCoord=1000   LineType=Primary   LineColor=Gray8Dark   Visible=Yes   BubbleLoc=Start
+   CoordSys=GLOBAL   AxisDir=Z   GridID=Z1   XRYZCoord=0   LineType=Primary   LineColor=Gray8Dark   Visible=Yes   BubbleLoc=End
+   CoordSys=GLOBAL   AxisDir=Z   GridID=Z2   XRYZCoord=3000   LineType=Primary   LineColor=Gray8Dark   Visible=Yes   BubbleLoc=End
+ 
+TABLE:  "MATERIAL PROPERTIES 01 - GENERAL"
+   Material=C30   Type=Concrete   Grade="GB50010 C30"   SymType=Isotropic   TempDepend=No   Color=Yellow   GUID=9da26e0b-e31d-44c9-aee6-bee56d748b0d   Notes="GB GB50010 C30 2023/5/27 16:28:31"
+   Material=HPB300   Type=Rebar   Grade="GB50010 HPB300"   SymType=Uniaxial   TempDepend=No   Color=Red   GUID=408f72ed-4ed3-40bc-9496-89ed8731702a   Notes="GB GB50010 HPB300 2023/5/27 16:34:49"
+   Material=JTG-fpk1470   Type=Tendon   Grade="JTGD62 fpk1470"   SymType=Uniaxial   TempDepend=No   Color=Magenta   GUID=4ecfe46d-823c-438f-8171-b5cef3a98274   Notes="JTG JTGD62 fpk1470 2023/5/27 16:40:53"
+   Material=Q355   Type=Steel   Grade=Q355   SymType=Isotropic   TempDepend=No   Color=Magenta   Notes="GB Q355 2023/5/27 16:28:31"
+ 
+TABLE:  "MATERIAL PROPERTIES 02 - BASIC MECHANICAL PROPERTIES"
+   Material=C30   UnitWeight=2.5E-05   UnitMass=2.55E-09   E1=30000   G12=12500   U12=0.2   A1=1E-05
+   Material=HPB300   UnitWeight=7.7E-05   UnitMass=7.85E-09   E1=210000   A1=1.17E-05
+   Material=JTG-fpk1470   UnitWeight=7.7E-05   UnitMass=7.85E-09   E1=195000   A1=1.17E-05
+   Material=Q355   UnitWeight=7.7E-05   UnitMass=7.85E-09   E1=206000   G12=79230.7692307692   U12=0.3   A1=1.2E-05
+ 
+TABLE:  "MATERIAL PROPERTIES 03A - STEEL DATA"
+   Material=Q355   Fy=355   Fu=470   EffFy=380   EffFu=520   SSCurveOpt=Simple   SSHysType=Kinematic   SHard=0.015   SMax=0.11   SRup=0.17   FinalSlope=-0.1   CoupModType="Von Mises"
+ 
+TABLE:  "MATERIAL PROPERTIES 03B - CONCRETE DATA"
+   Material=C30   Fc=20.1   eFc=20.1   LtWtConc=No   SSCurveOpt=Mander   SSHysType=Takeda   SFc=0.002   SCap=0.005   FinalSlope=-0.1   FAngle=0   DAngle=0   CoupModType="Modified Darwin-Pecknold"
+ 
+TABLE:  "MATERIAL PROPERTIES 03E - REBAR DATA"
+   Material=HPB300   Fy=300   Fu=420   EffFy=330   EffFu=460   SSCurveOpt=Simple   SSHysType=Kinematic   SHard=0.01   SCap=0.1   FinalSlope=-0.1   UseCTDef=No   CoupModType="Von Mises"
+ 
+TABLE:  "MATERIAL PROPERTIES 03F - TENDON DATA"
+   Material=JTG-fpk1470   Fy=1470   Fu=1690   SSCurveOpt="250 ksi"   SSHysType=Kinematic   FinalSlope=-0.1   CoupModType="Von Mises"
+ 
+TABLE:  "MATERIAL PROPERTIES 03J - COUPLED NONLINEAR VON MISES DATA"
+   Material=HPB300   YieldStress=330   LinIsoHard=No   LinKinHard=No   NLIsoSaHard=No
+   Material=JTG-fpk1470   YieldStress=1470   LinIsoHard=No   LinKinHard=No   NLIsoSaHard=No
+   Material=Q355   YieldStress=380   LinIsoHard=No   LinKinHard=No   NLIsoSaHard=No
+ 
+TABLE:  "MATERIAL PROPERTIES 06 - DAMPING PARAMETERS"
+   Material=C30   ModalRatio=0   VisMass=0   VisStiff=0   HysMass=0   HysStiff=0
+   Material=HPB300   ModalRatio=0   VisMass=0   VisStiff=0   HysMass=0   HysStiff=0
+   Material=JTG-fpk1470   ModalRatio=0   VisMass=0   VisStiff=0   HysMass=0   HysStiff=0
+   Material=Q355   ModalRatio=0   VisMass=0   VisStiff=0   HysMass=0   HysStiff=0
+ 
+TABLE:  "MATERIAL PROPERTIES 09 - ACCEPTANCE CRITERIA"
+   Material=C30   IOTens=0.01   LSTens=0.02   CPTens=0.05   IOComp=-0.003   LSComp=-0.006   CPComp=-0.015   IgnoreTens=Yes
+   Material=HPB300   IOTens=0.01   LSTens=0.02   CPTens=0.05   IOComp=-0.005   LSComp=-0.01   CPComp=-0.02
+   Material=JTG-fpk1470   IOTens=0.015   LSTens=0.023   CPTens=0.03   IOComp=-0.015   LSComp=-0.023   CPComp=-0.03
+   Material=Q355   IOTens=0.01   LSTens=0.02   CPTens=0.05   IOComp=-0.005   LSComp=-0.01   CPComp=-0.02
+ 
+TABLE:  "FRAME SECTION PROPERTIES 01 - GENERAL"
+   SectionName=FSEC1   Material=Q355   Shape="I/Wide Flange"   t3=304.8   t2=127   tf=9.652   tw=6.35   t2b=127   tfb=9.652   FilletRadius=0   Area=4264.5076   TorsConst=96511.7678053953   I33=65724174.702235   I22=3301257.17301008   I23=0 _
+        AS2=1935.48   AS3=2043.00666666667   S33=431260.98885981   S22=51988.3019371667   Z33=491187.4950424   Z22=80716.532115   R33=124.144683132414   R22=27.8230817990979   ConcCol=No   ConcBeam=No   Color=Blue   TotalWt=0   TotalMass=0 _
+        FromFile=No   AMod=1   A2Mod=1   A3Mod=1   JMod=1   I2Mod=1   I3Mod=1   MMod=1   WMod=1   Notes="Added 2023/5/27 16:28:33"
+   SectionName=NC500*500   Material=C30   Shape=Rectangular   t3=500   t2=500   Area=250000   TorsConst=8802083333.33333   I33=5208333333.33333   I22=5208333333.33333   I23=0   AS2=208333.333333333   AS3=208333.333333333 _
+        S33=20833333.3333333   S22=20833333.3333333   Z33=31250000   Z22=31250000   R33=144.337567297406   R22=144.337567297406   ConcCol=Yes   ConcBeam=No   Color=Cyan   TotalWt=18750   TotalMass=1.9125   FromFile=No   AMod=1   A2Mod=1 _
+        A3Mod=1   JMod=1   I2Mod=1   I3Mod=1   MMod=1   WMod=1   Notes="Added 2023/5/27 16:34:37"
+ 
+TABLE:  "FRAME SECTION PROPERTIES 02 - CONCRETE COLUMN"
+   SectionName=NC500*500   RebarMatL=HPB300   RebarMatC=HPB300   ReinfConfig=Rectangular   LatReinf=Ties   Cover=40   NumBars3Dir=3   NumBars2Dir=3   BarSizeL=#9   BarSizeC=#4   SpacingC=150   NumCBars2=3   NumCBars3=3   ReinfType=Design
+ 
+TABLE:  "FRAME SECTION PROPERTIES 13 - TIME DEPENDENT"
+   SectionName=FSEC1   TypeSize=Auto   AutoValSize=10.0235223880597   AutoSFSize=1
+   SectionName=NC500*500   TypeSize=Auto   AutoValSize=250   AutoSFSize=1
+ 
+TABLE:  "SOLID PROPERTY DEFINITIONS"
+   SolidProp=Solid1   Material=C30   MatAngleA=0   MatAngleB=0   MatAngleC=0   InComp=Yes   Color=Yellow   TotalWt=0   TotalMass=0
+ 
+TABLE:  "REBAR SIZES"
+   RebarID=#2   Area=32.258   Diameter=6.35
+   RebarID=#3   Area=70.9675996154547   Diameter=9.525
+   RebarID=#4   Area=129.032001922727   Diameter=12.7
+   RebarID=#5   Area=199.999601538181   Diameter=15.875
+   RebarID=#6   Area=283.870398461819   Diameter=19.05
+   RebarID=#7   Area=387.096015381813   Diameter=22.225
+   RebarID=#8   Area=509.676413843632   Diameter=25.4
+   RebarID=#9   Area=645.16   Diameter=28.6512005329132
+   RebarID=#10   Area=819.35318769455   Diameter=32.2579995155334
+   RebarID=#11   Area=1006.44956308365   Diameter=35.8139991521835
+   RebarID=#14   Area=1451.61   Diameter=43.0021989583969
+   RebarID=#18   Area=2580.64   Diameter=57.3277992248535
+   RebarID=10M   Area=100.000002655387   Diameter=11.300000667572
+   RebarID=15M   Area=200.000005310774   Diameter=15.9999999403954
+   RebarID=20M   Area=300.000017579794   Diameter=19.4999997854233
+   RebarID=25M   Area=500.000022890568   Diameter=25.2000016093254
+   RebarID=30M   Area=700.000008974075   Diameter=29.9000008821487
+   RebarID=35M   Area=1000.00004578114   Diameter=35.7000011444092
+   RebarID=45M   Area=1500.00010712624   Diameter=43.7000003576279
+   RebarID=55M   Area=2500.00007599831   Diameter=56.4000033855438
+   RebarID=6d   Area=28.3000004149973   Diameter=6.00000016689301
+   RebarID=8d   Area=50.2999995571375   Diameter=7.99999997019768
+   RebarID=10d   Area=78.5000013634562   Diameter=9.99999977350235
+   RebarID=12d   Area=113.000009249449   Diameter=12.000000333786
+   RebarID=14d   Area=154.000010818839   Diameter=14.0000008940697
+   RebarID=16d   Area=201.000015431643   Diameter=15.9999999403954
+   RebarID=20d   Area=314.000005453825   Diameter=19.9999995470047
+   RebarID=25d   Area=491.000008711815   Diameter=25.0000001907349
+   RebarID=26d   Area=531.000029001236   Diameter=25.9999997138977
+   RebarID=28d   Area=616.000043275356   Diameter=28.0000017881393
+   RebarID=N12   Area=113.000009249449   Diameter=12.000000333786
+   RebarID=N16   Area=201.000015431643   Diameter=15.9999999403954
+   RebarID=N20   Area=314.000005453825   Diameter=19.9999995470047
+   RebarID=N24   Area=452.000036997795   Diameter=24.000000667572
+   RebarID=N28   Area=616.000043275356   Diameter=28.0000017881393
+   RebarID=N32   Area=804.00006172657   Diameter=31.9999998807907
+   RebarID=N36   Area=1020.00001747131   Diameter=36.000001001358
+ 
+TABLE:  "LOAD PATTERN DEFINITIONS"
+   LoadPat=DEAD   DesignType=Dead   SelfWtMult=1   GUID=f9df571b-62be-40e8-8213-689dcf16647e
+   LoadPat=LIVE   DesignType=Live   SelfWtMult=0   GUID=3e05d9d7-4273-4a32-a14a-2016dbdba8e1   Notes="Added 2023/5/27 16:32:21"
+   LoadPat=PUSH   DesignType=Other   SelfWtMult=0   GUID=5450d7f2-bee8-4d65-b288-6710a25cea26   Notes="Added 2023/5/27 16:32:28"
+ 
+TABLE:  "AUTO WAVE 3 - WAVE CHARACTERISTICS - GENERAL"
+   WaveChar=Default   WaveType="From Theory"   KinFactor=1   SWaterDepth=45000   WaveHeight=18000   WavePeriod=12   WaveTheory=Linear
+ 
+TABLE:  "FUNCTION - RESPONSE SPECTRUM - USER"
+   Name=UNIFRS   Period=0   Accel=1   FuncDamp=0.05
+   Name=UNIFRS   Period=1   Accel=1
+ 
+TABLE:  "FUNCTION - TIME HISTORY - USER"
+   Name=RAMPTH   Time=0   Value=0
+   Name=RAMPTH   Time=1   Value=1
+   Name=RAMPTH   Time=4   Value=1
+   Name=UNIFTH   Time=0   Value=1
+   Name=UNIFTH   Time=1   Value=1
+ 
+TABLE:  "FUNCTION - POWER SPECTRAL DENSITY - USER"
+   Name=UNIFPSD   Frequency=0   Value=1
+   Name=UNIFPSD   Frequency=1   Value=1
+ 
+TABLE:  "FUNCTION - STEADY STATE - USER"
+   Name=UNIFSS   Frequency=0   Value=1
+   Name=UNIFSS   Frequency=1   Value=1
+ 
+TABLE:  "CONSTRAINT DEFINITIONS - BODY"
+   Name=Y   CoordSys=GLOBAL   UX=No   UY=Yes   UZ=No   RX=Yes   RY=No   RZ=Yes
+ 
+TABLE:  "GROUPS 1 - DEFINITIONS"
+   GroupName=ALL   Selection=Yes   SectionCut=Yes   Steel=Yes   Concrete=Yes   Aluminum=Yes   ColdFormed=Yes   Stage=Yes   Bridge=Yes   AutoSeismic=No   AutoWind=No   SelDesSteel=No   SelDesAlum=No   SelDesCold=No   MassWeight=Yes   Color=Red
+ 
+TABLE:  "GROUPS 3 - MASSES AND WEIGHTS"
+   GroupName=ALL   SelfMass=1.9125   SelfWeight=18750   TotalMassX=1.9125   TotalMassY=1.9125   TotalMassZ=1.9125
+ 
+TABLE:  "JOINT PATTERN DEFINITIONS"
+   Pattern=Default
+ 
+TABLE:  "MASS SOURCE"
+   MassSource=MSSSRC1   Elements=Yes   Masses=Yes   Loads=No   IsDefault=Yes
+ 
+TABLE:  "FUNCTION - PLOT FUNCTIONS"
+   PlotFunc="Input Energy"   Type=Energy   Component=Input   Mode=All
+ 
+TABLE:  "LOAD CASE DEFINITIONS"
+   Case=DEAD   Type=LinStatic   InitialCond=Zero   DesTypeOpt="Prog Det"   DesignType=Dead   DesActOpt="Prog Det"   DesignAct=Non-Composite   AutoType=None   RunCase=Yes   CaseStatus=Finished   GUID=9cea468f-5622-4296-87fd-ee70ca7e9ab7
+   Case=MODAL   Type=LinModal   InitialCond=Zero   DesTypeOpt="Prog Det"   DesignType=Other   DesActOpt="Prog Det"   DesignAct=Other   AutoType=None   RunCase=Yes   CaseStatus=Finished   GUID=3bf0e73b-8663-45a3-8511-11077e00998c
+   Case=LIVE   Type=LinStatic   InitialCond=Zero   DesTypeOpt="Prog Det"   DesignType=Live   DesActOpt="Prog Det"   DesignAct="Short-Term Composite"   AutoType=None   RunCase=Yes   CaseStatus=Finished   GUID=ef70d3bd-9ccf-47f6-9f7a-090df8a8c698
+   Case=PUSH   Type=LinStatic   InitialCond=Zero   DesTypeOpt="Prog Det"   DesignType=Other   DesActOpt="Prog Det"   DesignAct=Other   AutoType=None   RunCase=Yes   CaseStatus=Finished   GUID=d1fadb53-ab96-4a17-b9f7-94cfd824cf91
+ 
+TABLE:  "CASE - STATIC 1 - LOAD ASSIGNMENTS"
+   Case=DEAD   LoadType="Load pattern"   LoadName=DEAD   LoadSF=1
+   Case=LIVE   LoadType="Load pattern"   LoadName=LIVE   LoadSF=1
+   Case=PUSH   LoadType="Load pattern"   LoadName=PUSH   LoadSF=1
+ 
+TABLE:  "CASE - MODAL 1 - GENERAL"
+   Case=MODAL   ModeType=Eigen   MaxNumModes=12   MinNumModes=1   EigenShift=0   EigenCutoff=0   EigenTol=1E-09   AutoShift=Yes
+ 
+TABLE:  "JOINT COORDINATES"
+   Joint=37   CoordSys=GLOBAL   CoordType=Cartesian   XorR=0   Y=0   Z=0   SpecialJt=No   GlobalX=0   GlobalY=0   GlobalZ=0   GUID=739a7cb8-c9dc-4f20-a493-6434fbb27a58
+   Joint=39   CoordSys=GLOBAL   CoordType=Cartesian   XorR=0   Y=0   Z=3000   SpecialJt=No   GlobalX=0   GlobalY=0   GlobalZ=3000   GUID=b045e6d9-6ce7-4f75-81e8-de53e67bcd52
+ 
+TABLE:  "CONNECTIVITY - FRAME"
+   Frame=61   JointI=37   JointJ=39   IsCurved=No   Length=3000   CentroidX=0   CentroidY=0   CentroidZ=1500   GUID=061237d5-f746-44fb-becc-8d44a821ecc8
+ 
+TABLE:  "JOINT RESTRAINT ASSIGNMENTS"
+   Joint=37   U1=Yes   U2=Yes   U3=Yes   R1=Yes   R2=Yes   R3=Yes
+ 
+TABLE:  "JOINT LOADS - FORCE"
+   Joint=39   LoadPat=DEAD   CoordSys=GLOBAL   F1=0   F2=0   F3=-1500000   M1=0   M2=0   M3=0   GUID=ab5feda0-d53a-48dd-8716-dc68ccb2c5e1
+   Joint=39   LoadPat=PUSH   CoordSys=GLOBAL   F1=1000   F2=0   F3=0   M1=0   M2=0   M3=0   GUID=22d63654-868d-4cb4-94d4-8f9a12054f76
+ 
+TABLE:  "FRAME SECTION ASSIGNMENTS"
+   Frame=61   SectionType=Rectangular   AutoSelect=N.A.   AnalSect=NC500*500   DesignSect=NC500*500   MatProp=Default
+ 
+TABLE:  "FRAME OUTPUT STATION ASSIGNMENTS"
+   Frame=61   StationType=MinNumSta   MinNumSta=3   AddAtElmInt=Yes   AddAtPtLoad=Yes
+ 
+TABLE:  "FRAME AUTO MESH ASSIGNMENTS"
+   Frame=61   AutoMesh=Yes   AtJoints=Yes   AtFrames=No   NumSegments=0   MaxLength=0   MaxDegrees=0
+ 
+TABLE:  "FRAME LOAD TRANSFER OPTIONS"
+   Frame=61   Transfer=Yes
+ 
+TABLE:  "FRAME DESIGN PROCEDURES"
+   Frame=61   DesignProc="From Material"
+ 
+TABLE:  "OVERWRITES - CONCRETE DESIGN - ACI 318-14"
+   Frame=61   DesignSect="Program Determined"   FrameType="Program Determined"   RLLF=0   XLMajor=0   XLMinor=0   XKMajor=0   XKMinor=0   CmMajor=0   CmMinor=0   DnsMajor=0   DnsMinor=0   DsMajor=0   DsMinor=0
+ 
+TABLE:  "PREFERENCES - DIMENSIONAL"
+   MergeTol=1   FineGrid=250   Nudge=250   SelectTol=3   SnapTol=12   SLineThick=2   PLineThick=4   MaxFont=8   MinFont=3   AutoZoom=10   ShrinkFact=70   TextFileLen=240
+ 
+TABLE:  "PREFERENCES - STEEL DESIGN - AISC 360-16"
+   THDesign=Envelopes   FrameType=SMF   PatLLF=0.75   SRatioLimit=0.95   MaxIter=1   SDC=D   SeisCode=No   SeisLoad=No   ImpFactor=1   SystemRho=1   SystemSds=0.5   SystemR=8   SystemCd=5.5   Omega0=3   Provision=LRFD _
+        AMethod="Direct Analysis"   SOMethod="General 2nd Order"   SRMethod="Tau-b Fixed"   NLCoeff=0.002   PhiB=0.9   PhiC=0.9   PhiTY=0.9   PhiTF=0.75   PhiV=0.9   PhiVRolledI=1   PhiVT=0.9   PlugWeld=Yes   HSSWelding=ERW   HSSReduceT=No _
+        CheckDefl=No   DLRat=120   SDLAndLLRat=120   LLRat=360   TotalRat=240   NetRat=240
+ 
+TABLE:  "PREFERENCES - CONCRETE DESIGN - ACI 318-14"
+   THDesign=Envelopes   NumCurves=24   NumPoints=11   MinEccen=Yes   PatLLF=0.75   UFLimit=0.95   SeisCat=D   Rho=1   Sds=0.5   PhiT=0.9   PhiCTied=0.65   PhiCSpiral=0.75   PhiV=0.75   PhiVSeismic=0.6   PhiVJoint=0.85
+ 
+TABLE:  "PREFERENCES - ALUMINUM DESIGN - AA 2015"
+   THDesign=Envelopes   SRatioLimit=1   Provision=LRFD   LatFact=1.33333333333333   UseLatFact=No   Bridge=No   PhiTy=0.9   PhiTr=0.75   PhiC=0.9   PhiBo=0.9   PhiBr=0.75   PhiVo=0.9   PhiVr=0.75
+ 
+TABLE:  "PREFERENCES - COLD FORMED DESIGN - AISI-16"
+   THDesign=Envelopes   FrameType="Braced Frame"   SRatioLimit=1   SOMethod="General 2nd Order"   Provision=LRFD   LatFact=1.33333333333333   UseLatFact=No   PhiTy=0.9   PhiTr=0.75   PhiC=0.85   PhiB=0.9   PhiBPipe=0.95   PhiV=0.95
+ 
+TABLE:  "OPTIONS - COLORS - DISPLAY"
+   DeviceType=Screen   Points=Blue   LinesFrame=Blue   LinesFrmDL=Blue   LinesCable=Green   LinesTendon=Green   SpringLinks=Green   Restraints=Green   Releases=Green   Axes=Cyan   Text=Black   ShadowLines=Gray8Dark   GuideLines=Gray8Dark _
+        Highlight=Red   Selection=10504778   AreaFillBot=Red   AreaFillTop=16744703   AreaFillSd=Red   AreaEdge=DarkRed   SolidF1=Red   SolidF2=Blue   SolidF3=Green   SolidF4=Yellow   SolidF5=White   SolidF6=Cyan   SolidEdge=DarkRed _
+        Floor=Gray4   Background=White   BGLowLeft=White   BGLowRight=White   BGUpRight=White   Darkness=0
+   DeviceType=Printer   Points=Gray8Dark   LinesFrame=Black   LinesFrmDL=Gray4   LinesCable=Black   LinesTendon=Black   SpringLinks=Gray8Dark   Restraints=Gray8Dark   Releases=Gray4   Axes=Black   Text=Black   ShadowLines=Gray4 _
+        GuideLines=Gray4   Highlight=Black   Selection=Black   AreaFillBot=Gray4   AreaFillTop=Gray8Dark   AreaFillSd=Gray4   AreaEdge=Black   SolidF1=Gray1Light   SolidF2=Gray2   SolidF3=Gray3   SolidF4=Gray4   SolidF5=Gray5 _
+        SolidF6=Gray6   SolidEdge=Black   Floor=Gray4   Background=White   BGLowLeft=White   BGLowRight=White   BGUpRight=White   Darkness=0.5
+   DeviceType="Color Printer"   Points=Blue   LinesFrame=Blue   LinesFrmDL=Blue   LinesCable=Green   LinesTendon=Green   SpringLinks=Green   Restraints=Green   Releases=Green   Axes=Cyan   Text=Black   ShadowLines=Gray8Dark _
+        GuideLines=Gray8Dark   Highlight=Red   Selection=10504778   AreaFillBot=Red   AreaFillTop=16744703   AreaFillSd=Red   AreaEdge=DarkRed   SolidF1=Red   SolidF2=Blue   SolidF3=Green   SolidF4=Yellow   SolidF5=White   SolidF6=Cyan _
+        SolidEdge=DarkRed   Floor=Gray4   Background=White   BGLowLeft=White   BGLowRight=White   BGUpRight=White   Darkness=0.5
+ 
+TABLE:  "OPTIONS - COLORS - OUTPUT"
+   DeviceType=Screen   Contour1=13107400   Contour2=6553828   Contour3=Red   Contour4=16639   Contour5=Orange   Contour6=43775   Contour7=54527   Contour8=Yellow   Contour9=65408   Contour10=Green   Contour11=8453888   Contour12=Cyan _
+        Contour13=16755200   Contour14=16733440   Contour15=Blue   Transpare=0.5   Ratio1=Cyan   Ratio2=Green   Ratio3=Yellow   Ratio4=Orange   Ratio5=Red   RatioNotD=Gray4   RatioNotC=Red   RatioVal1=0.5   RatioVal2=0.7   RatioVal3=0.9 _
+        RatioVal4=1   DFillPos=Blue   DFillNeg=Red   DFillRPos=Green   DFillRNeg=Green
+   DeviceType=Printer   Contour1=Black   Contour2=3158064   Contour3=4210752   Contour4=5263440   Contour5=6316128   Contour6=7368816   Contour7=Gray8Dark   Contour8=Gray7   Contour9=Gray6   Contour10=Gray5   Contour11=Gray4 _
+        Contour12=Gray3   Contour13=Gray2   Contour14=Gray1Light   Contour15=White   Transpare=0   Ratio1=Gray2   Ratio2=Gray4   Ratio3=Gray8Dark   Ratio4=4210752   Ratio5=Black   RatioNotD=Gray4   RatioNotC=Black   RatioVal1=0.5 _
+        RatioVal2=0.7   RatioVal3=0.9   RatioVal4=1   DFillPos=Gray8Dark   DFillNeg=Gray8Dark   DFillRPos=4210752   DFillRNeg=4210752
+   DeviceType="Color Printer"   Contour1=13107400   Contour2=6553828   Contour3=Red   Contour4=16639   Contour5=Orange   Contour6=43775   Contour7=54527   Contour8=Yellow   Contour9=65408   Contour10=Green   Contour11=8453888 _
+        Contour12=Cyan   Contour13=16755200   Contour14=16733440   Contour15=Blue   Transpare=0   Ratio1=Cyan   Ratio2=Green   Ratio3=Yellow   Ratio4=Orange   Ratio5=Red   RatioNotD=Gray4   RatioNotC=Red   RatioVal1=0.5   RatioVal2=0.7 _
+        RatioVal3=0.9   RatioVal4=1   DFillPos=Blue   DFillNeg=Red   DFillRPos=Green   DFillRNeg=Green
+ 
+TABLE:  "DATABASE FORMAT TYPES"
+   UnitsCurr=Yes   OverrideE=No
+ 
+TABLE:  "PROJECT INFORMATION"
+   Item="Company Name"   Data=lzcy
+   Item="Client Name"
+   Item="Project Name"
+   Item="Project Number"
+   Item="Model Name"
+   Item="Model Description"
+   Item="Revision Number"
+   Item="Frame Type"
+   Item=Engineer
+   Item=Checker
+   Item=Supervisor
+   Item="Issue Code"
+   Item="Design Code"
+ 
+TABLE:  "MATERIAL LIST 1 - BY OBJECT TYPE"
+   ObjectType=Frame   Material=C30   TotalWeight=18750   NumPieces=1
+ 
+TABLE:  "MATERIAL LIST 2 - BY SECTION PROPERTY"
+   Section=NC500*500   ObjectType=Frame   NumPieces=1   TotalLength=3000   TotalWeight=18750
+ 
+TABLE:  "ANALYSIS MESSAGES"
+   DateTime="2023/5/27 16:36:52"   Type=Information   Message="NUMBER OF MODES SOUGHT REDUCED TO THE NUMBER OF MASS DEGREES OF FREEDOM"   LoadCase=MODAL   Operation="RUNNING ANALYSIS"   TagRun=0   SerialRun=1   Computer=PC
+   DateTime="2023/5/27 16:36:52"   Type=Information   Message="TOTAL TIME FOR THIS ANALYSIS: 00:00:00"   LoadCase=N/A   Operation="RUNNING CASES IN SERIES"   TagRun=0   SerialRun=1   Computer=PC
+ 
+TABLE:  "JOINT DISPLACEMENTS"
+   Joint=37   OutputCase=DEAD   CaseType=LinStatic   U1=0   U2=0   U3=0   R1=0   R2=0   R3=0
+   Joint=37   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=1   U1=0   U2=0   U3=0   R1=0   R2=0   R3=0
+   Joint=37   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=2   U1=0   U2=0   U3=0   R1=0   R2=0   R3=0
+   Joint=37   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=3   U1=0   U2=0   U3=0   R1=0   R2=0   R3=0
+   Joint=37   OutputCase=LIVE   CaseType=LinStatic   U1=0   U2=0   U3=0   R1=0   R2=0   R3=0
+   Joint=37   OutputCase=PUSH   CaseType=LinStatic   U1=0   U2=0   U3=0   R1=0   R2=0   R3=0
+   Joint=39   OutputCase=DEAD   CaseType=LinStatic   U1=0   U2=0   U3=-0.60375   R1=0   R2=0   R3=0
+   Joint=39   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=1   U1=0.252709327803418   U2=0.990903441122329   U3=4.33680868994202E-18   R1=-0.000485736980942318   R2=0.000123877121472264   R3=0
+   Joint=39   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=2   U1=-0.990903441122329   U2=0.252709327803418   U3=1.82145964977565E-17   R1=-0.000123877121472264   R2=-0.000485736980942318   R3=0
+   Joint=39   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=3   U1=-1.6577961105738E-17   U2=8.70348440372181E-18   U3=-1.02261998512983   R1=-1.78720882447719E-20   R2=3.26905714417132E-20   R3=0
+   Joint=39   OutputCase=LIVE   CaseType=LinStatic   U1=0   U2=0   U3=0   R1=0   R2=0   R3=0
+   Joint=39   OutputCase=PUSH   CaseType=LinStatic   U1=0.058752   U2=0   U3=0   R1=0   R2=2.88E-05   R3=0
+ 
+TABLE:  "JOINT REACTIONS"
+   Joint=37   OutputCase=DEAD   CaseType=LinStatic   F1=0   F2=0   F3=1518750   M1=0   M2=0   M3=0
+   Joint=37   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=1   F1=-4301.28894000915   F2=-16865.8673938305   F3=-1.0842021724855E-11   M1=50597602.1814915   M2=-12903866.8200275   M3=0
+   Joint=37   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=2   F1=16865.8673938305   F2=-4301.28894000916   F3=-4.55364912443912E-11   M1=12903866.8200275   M2=50597602.1814915   M3=0
+   Joint=37   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=3   F1=4.2189955162235E-12   F2=1.16413631452135E-12   F3=2556549.96282457   M1=-8.1536654236682E-10   M2=4.62585934507935E-09   M3=0
+   Joint=37   OutputCase=LIVE   CaseType=LinStatic   F1=0   F2=0   F3=0   M1=0   M2=0   M3=0
+   Joint=37   OutputCase=PUSH   CaseType=LinStatic   F1=-1000   F2=0   F3=0   M1=0   M2=-3000000   M3=0
+ 
+TABLE:  "ASSEMBLED JOINT MASSES"
+   Joint=37   MassSource=MSSSRC1   U1=0.95625   U2=0.95625   U3=0.95625   R1=0   R2=0   R3=0   CenterX=0   CenterY=0   CenterZ=0
+   Joint=39   MassSource=MSSSRC1   U1=0.95625   U2=0.95625   U3=0.95625   R1=0   R2=0   R3=0   CenterX=0   CenterY=0   CenterZ=3000
+   Joint=SumAccelUX   MassSource=MSSSRC1   U1=1.9125   U2=0   U3=0   R1=0   R2=0   R3=0   CenterX=0   CenterY=0   CenterZ=1500
+   Joint=SumAccelUY   MassSource=MSSSRC1   U1=0   U2=1.9125   U3=0   R1=0   R2=0   R3=0   CenterX=0   CenterY=0   CenterZ=1500
+   Joint=SumAccelUZ   MassSource=MSSSRC1   U1=0   U2=0   U3=1.9125   R1=0   R2=0   R3=0   CenterX=0   CenterY=0   CenterZ=1500
+ 
+TABLE:  "ELEMENT FORCES - FRAMES"
+   Frame=61   Station=0   OutputCase=DEAD   CaseType=LinStatic   P=-1518750   V2=0   V3=0   T=0   M2=0   M3=0   FrameElem=61-1   ElemStation=0
+   Frame=61   Station=1500   OutputCase=DEAD   CaseType=LinStatic   P=-1509375   V2=0   V3=0   T=0   M2=0   M3=0   FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=3000   OutputCase=DEAD   CaseType=LinStatic   P=-1500000   V2=0   V3=0   T=0   M2=0   M3=0   FrameElem=61-1   ElemStation=3000
+   Frame=61   Station=0   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=1   P=1.0842021724855E-11   V2=4301.28894000915   V3=16865.8673938305   T=0   M2=50597602.1814915   M3=12903866.8200275   FrameElem=61-1   ElemStation=0
+   Frame=61   Station=1500   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=1   P=1.0842021724855E-11   V2=4301.28894000915   V3=16865.8673938305   T=0   M2=25298801.0907458   M3=6451933.41001374   FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=3000   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=1   P=1.0842021724855E-11   V2=4301.28894000915   V3=16865.8673938305   T=0   M2=1.3606040738523E-08   M3=1.3329554349184E-08   FrameElem=61-1   ElemStation=3000
+   Frame=61   Station=0   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=2   P=4.55364912443912E-11   V2=-16865.8673938305   V3=4301.28894000916   T=0   M2=12903866.8200275   M3=-50597602.1814915   FrameElem=61-1   ElemStation=0
+   Frame=61   Station=1500   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=2   P=4.55364912443912E-11   V2=-16865.8673938305   V3=4301.28894000916   T=0   M2=6451933.41001374   M3=-25298801.0907457   FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=3000   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=2   P=4.55364912443912E-11   V2=-16865.8673938305   V3=4301.28894000916   T=0   M2=3.28145688399673E-09   M3=1.39407347887754E-08   FrameElem=61-1   ElemStation=3000
+   Frame=61   Station=0   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=3   P=-2556549.96282457   V2=-4.2189955162235E-12   V3=-1.16413631452135E-12   T=0   M2=-8.1536654236682E-10   M3=-4.62585934507935E-09 _
+        FrameElem=61-1   ElemStation=0
+   Frame=61   Station=1500   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=3   P=-2556549.96282457   V2=-4.2189955162235E-12   V3=-1.16413631452135E-12   T=0   M2=9.30837929415201E-10   M3=1.70263392925589E-09 _
+        FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=3000   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=3   P=-2556549.96282457   V2=-4.2189955162235E-12   V3=-1.16413631452135E-12   T=0   M2=2.67704240119722E-09   M3=8.03112720359114E-09 _
+        FrameElem=61-1   ElemStation=3000
+   Frame=61   Station=0   OutputCase=LIVE   CaseType=LinStatic   P=0   V2=0   V3=0   T=0   M2=0   M3=0   FrameElem=61-1   ElemStation=0
+   Frame=61   Station=1500   OutputCase=LIVE   CaseType=LinStatic   P=0   V2=0   V3=0   T=0   M2=0   M3=0   FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=3000   OutputCase=LIVE   CaseType=LinStatic   P=0   V2=0   V3=0   T=0   M2=0   M3=0   FrameElem=61-1   ElemStation=3000
+   Frame=61   Station=0   OutputCase=PUSH   CaseType=LinStatic   P=0   V2=1000   V3=0   T=0   M2=0   M3=3000000   FrameElem=61-1   ElemStation=0
+   Frame=61   Station=1500   OutputCase=PUSH   CaseType=LinStatic   P=0   V2=1000   V3=0   T=0   M2=0   M3=1500000   FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=3000   OutputCase=PUSH   CaseType=LinStatic   P=0   V2=1000   V3=0   T=0   M2=0   M3=4.03360900236294E-10   FrameElem=61-1   ElemStation=3000
+ 
+TABLE:  "ELEMENT STRESSES - FRAMES"
+   Frame=61   Station=0   OutputCase=DEAD   CaseType=LinStatic   Point=0   X2=0   X3=0   S11=-6.075   S12=0   S13=0   SMax=0   SMin=-6.075   SVM=6.075   IsS11Max=Yes   IsS12Max=Yes   IsS13Max=Yes   IsSMaxMax=Yes   IsSMinMax=Yes _
+        IsSVMMax=Yes   IsS11Min=Yes   IsS12Min=Yes   IsS31Min=Yes   IsSMaxMin=Yes   IsSMinMin=Yes   IsSVMMin=Yes   FrameElem=61-1   ElemStation=0
+   Frame=61   Station=0   OutputCase=DEAD   CaseType=LinStatic   Point=1   X2=-250   X3=-250   S11=-6.075   S12=0   S13=0   SMax=0   SMin=-6.075   SVM=6.075   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No _
+        IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=0
+   Frame=61   Station=0   OutputCase=DEAD   CaseType=LinStatic   Point=2   X2=-250   X3=0   S11=-6.075   S12=0   S13=0   SMax=0   SMin=-6.075   SVM=6.075   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No _
+        IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=0
+   Frame=61   Station=0   OutputCase=DEAD   CaseType=LinStatic   Point=3   X2=-250   X3=250   S11=-6.075   S12=0   S13=0   SMax=0   SMin=-6.075   SVM=6.075   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No _
+        IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=0
+   Frame=61   Station=0   OutputCase=DEAD   CaseType=LinStatic   Point=4   X2=0   X3=-250   S11=-6.075   S12=0   S13=0   SMax=0   SMin=-6.075   SVM=6.075   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No _
+        IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=0
+   Frame=61   Station=0   OutputCase=DEAD   CaseType=LinStatic   Point=5   X2=0   X3=250   S11=-6.075   S12=0   S13=0   SMax=0   SMin=-6.075   SVM=6.075   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No _
+        IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=0
+   Frame=61   Station=0   OutputCase=DEAD   CaseType=LinStatic   Point=6   X2=250   X3=-250   S11=-6.075   S12=0   S13=0   SMax=0   SMin=-6.075   SVM=6.075   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No _
+        IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=0
+   Frame=61   Station=0   OutputCase=DEAD   CaseType=LinStatic   Point=7   X2=250   X3=0   S11=-6.075   S12=0   S13=0   SMax=0   SMin=-6.075   SVM=6.075   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No _
+        IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=0
+   Frame=61   Station=0   OutputCase=DEAD   CaseType=LinStatic   Point=8   X2=250   X3=250   S11=-6.075   S12=0   S13=0   SMax=0   SMin=-6.075   SVM=6.075   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No _
+        IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=0
+   Frame=61   Station=1500   OutputCase=DEAD   CaseType=LinStatic   Point=0   X2=0   X3=0   S11=-6.0375   S12=0   S13=0   SMax=0   SMin=-6.0375   SVM=6.0375   IsS11Max=Yes   IsS12Max=Yes   IsS13Max=Yes   IsSMaxMax=Yes   IsSMinMax=Yes _
+        IsSVMMax=Yes   IsS11Min=Yes   IsS12Min=Yes   IsS31Min=Yes   IsSMaxMin=Yes   IsSMinMin=Yes   IsSVMMin=Yes   FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=1500   OutputCase=DEAD   CaseType=LinStatic   Point=1   X2=-250   X3=-250   S11=-6.0375   S12=0   S13=0   SMax=0   SMin=-6.0375   SVM=6.0375   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No _
+        IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=1500   OutputCase=DEAD   CaseType=LinStatic   Point=2   X2=-250   X3=0   S11=-6.0375   S12=0   S13=0   SMax=0   SMin=-6.0375   SVM=6.0375   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No _
+        IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=1500   OutputCase=DEAD   CaseType=LinStatic   Point=3   X2=-250   X3=250   S11=-6.0375   S12=0   S13=0   SMax=0   SMin=-6.0375   SVM=6.0375   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No _
+        IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=1500   OutputCase=DEAD   CaseType=LinStatic   Point=4   X2=0   X3=-250   S11=-6.0375   S12=0   S13=0   SMax=0   SMin=-6.0375   SVM=6.0375   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No _
+        IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=1500   OutputCase=DEAD   CaseType=LinStatic   Point=5   X2=0   X3=250   S11=-6.0375   S12=0   S13=0   SMax=0   SMin=-6.0375   SVM=6.0375   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No _
+        IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=1500   OutputCase=DEAD   CaseType=LinStatic   Point=6   X2=250   X3=-250   S11=-6.0375   S12=0   S13=0   SMax=0   SMin=-6.0375   SVM=6.0375   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No _
+        IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=1500   OutputCase=DEAD   CaseType=LinStatic   Point=7   X2=250   X3=0   S11=-6.0375   S12=0   S13=0   SMax=0   SMin=-6.0375   SVM=6.0375   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No _
+        IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=1500   OutputCase=DEAD   CaseType=LinStatic   Point=8   X2=250   X3=250   S11=-6.0375   S12=0   S13=0   SMax=0   SMin=-6.0375   SVM=6.0375   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No _
+        IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=3000   OutputCase=DEAD   CaseType=LinStatic   Point=0   X2=0   X3=0   S11=-6   S12=0   S13=0   SMax=0   SMin=-6   SVM=6   IsS11Max=Yes   IsS12Max=Yes   IsS13Max=Yes   IsSMaxMax=Yes   IsSMinMax=Yes   IsSVMMax=Yes _
+        IsS11Min=Yes   IsS12Min=Yes   IsS31Min=Yes   IsSMaxMin=Yes   IsSMinMin=Yes   IsSVMMin=Yes   FrameElem=61-1   ElemStation=3000
+   Frame=61   Station=3000   OutputCase=DEAD   CaseType=LinStatic   Point=1   X2=-250   X3=-250   S11=-6   S12=0   S13=0   SMax=0   SMin=-6   SVM=6   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No _
+        IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=3000
+   Frame=61   Station=3000   OutputCase=DEAD   CaseType=LinStatic   Point=2   X2=-250   X3=0   S11=-6   S12=0   S13=0   SMax=0   SMin=-6   SVM=6   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No _
+        IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=3000
+   Frame=61   Station=3000   OutputCase=DEAD   CaseType=LinStatic   Point=3   X2=-250   X3=250   S11=-6   S12=0   S13=0   SMax=0   SMin=-6   SVM=6   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No _
+        IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=3000
+   Frame=61   Station=3000   OutputCase=DEAD   CaseType=LinStatic   Point=4   X2=0   X3=-250   S11=-6   S12=0   S13=0   SMax=0   SMin=-6   SVM=6   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No _
+        IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=3000
+   Frame=61   Station=3000   OutputCase=DEAD   CaseType=LinStatic   Point=5   X2=0   X3=250   S11=-6   S12=0   S13=0   SMax=0   SMin=-6   SVM=6   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No _
+        IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=3000
+   Frame=61   Station=3000   OutputCase=DEAD   CaseType=LinStatic   Point=6   X2=250   X3=-250   S11=-6   S12=0   S13=0   SMax=0   SMin=-6   SVM=6   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No _
+        IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=3000
+   Frame=61   Station=3000   OutputCase=DEAD   CaseType=LinStatic   Point=7   X2=250   X3=0   S11=-6   S12=0   S13=0   SMax=0   SMin=-6   SVM=6   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No _
+        IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=3000
+   Frame=61   Station=3000   OutputCase=DEAD   CaseType=LinStatic   Point=8   X2=250   X3=250   S11=-6   S12=0   S13=0   SMax=0   SMin=-6   SVM=6   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No _
+        IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=3000
+   Frame=61   Station=0   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=1   Point=0   X2=0   X3=0   S11=4.33680868994202E-17   S12=0.0258077336400549   S13=0.101195204362983   SMax=0.10443423050754   SMin=-0.10443423050754 _
+        SVM=0.180885393288418   IsS11Max=No   IsS12Max=Yes   IsS13Max=Yes   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=Yes   FrameElem=61-1   ElemStation=0
+   Frame=61   Station=0   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=1   Point=1   X2=-250   X3=-250   S11=3.04807051207291   S12=0   S13=0   SMax=3.04807051207291   SMin=0   SVM=3.04807051207291   IsS11Max=Yes _
+        IsS12Max=No   IsS13Max=No   IsSMaxMax=Yes   IsSMinMax=Yes   IsSVMMax=Yes   IsS11Min=No   IsS12Min=Yes   IsS31Min=Yes   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=0
+   Frame=61   Station=0   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=1   Point=2   X2=-250   X3=0   S11=0.619385607361319   S12=0   S13=0.101195204362983   SMax=0.635499651425843   SMin=-0.0161140440645243 _
+        SVM=0.643707960774564   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=0
+   Frame=61   Station=0   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=1   Point=3   X2=-250   X3=250   S11=-1.80929929735027   S12=0   S13=0   SMax=0   SMin=-1.80929929735027   SVM=1.80929929735027   IsS11Max=No _
+        IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=Yes   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=0
+   Frame=61   Station=0   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=1   Point=4   X2=0   X3=-250   S11=2.42868490471159   S12=0.0258077336400549   S13=0   SMax=2.42895911233915   SMin=-0.000274207627560585 _
+        SVM=2.42909622776062   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=0
+   Frame=61   Station=0   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=1   Point=5   X2=0   X3=250   S11=-2.42868490471159   S12=0.0258077336400549   S13=0   SMax=0.000274207627560585   SMin=-2.42895911233915 _
+        SVM=2.42909622776062   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=0
+   Frame=61   Station=0   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=1   Point=6   X2=250   X3=-250   S11=1.80929929735027   S12=0   S13=0   SMax=1.80929929735027   SMin=0   SVM=1.80929929735027   IsS11Max=No _
+        IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=0
+   Frame=61   Station=0   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=1   Point=7   X2=250   X3=0   S11=-0.619385607361319   S12=0   S13=0.101195204362983   SMax=0.0161140440645243   SMin=-0.635499651425843 _
+        SVM=0.643707960774564   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=0
+   Frame=61   Station=0   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=1   Point=8   X2=250   X3=250   S11=-3.04807051207291   S12=0   S13=0   SMax=0   SMin=-3.04807051207291   SVM=3.04807051207291   IsS11Max=No _
+        IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=Yes   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=Yes   IsSVMMin=No   FrameElem=61-1   ElemStation=0
+   Frame=61   Station=1500   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=1   Point=0   X2=0   X3=0   S11=4.33680868994202E-17   S12=0.0258077336400549   S13=0.101195204362983   SMax=0.10443423050754 _
+        SMin=-0.10443423050754   SVM=0.180885393288418   IsS11Max=No   IsS12Max=Yes   IsS13Max=Yes   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=Yes _
+        FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=1500   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=1   Point=1   X2=-250   X3=-250   S11=1.52403525603646   S12=0   S13=0   SMax=1.52403525603646   SMin=0   SVM=1.52403525603646   IsS11Max=Yes _
+        IsS12Max=No   IsS13Max=No   IsSMaxMax=Yes   IsSMinMax=Yes   IsSVMMax=Yes   IsS11Min=No   IsS12Min=Yes   IsS31Min=Yes   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=1500   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=1   Point=2   X2=-250   X3=0   S11=0.30969280368066   S12=0   S13=0.101195204362983   SMax=0.339827150971051   SMin=-0.0301343472903913 _
+        SVM=0.355852554873202   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=1500   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=1   Point=3   X2=-250   X3=250   S11=-0.904649648675137   S12=0   S13=0   SMax=0   SMin=-0.904649648675137   SVM=0.904649648675137   IsS11Max=No _
+        IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=Yes   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=1500   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=1   Point=4   X2=0   X3=-250   S11=1.2143424523558   S12=0.0258077336400549   S13=0   SMax=1.2148906820241   SMin=-0.000548229668307587 _
+        SVM=1.2151648896098   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=1500   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=1   Point=5   X2=0   X3=250   S11=-1.2143424523558   S12=0.0258077336400549   S13=0   SMax=0.000548229668307587   SMin=-1.2148906820241 _
+        SVM=1.2151648896098   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=1500   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=1   Point=6   X2=250   X3=-250   S11=0.904649648675137   S12=0   S13=0   SMax=0.904649648675137   SMin=0   SVM=0.904649648675137   IsS11Max=No _
+        IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=1500   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=1   Point=7   X2=250   X3=0   S11=-0.30969280368066   S12=0   S13=0.101195204362983   SMax=0.0301343472903913   SMin=-0.339827150971051 _
+        SVM=0.355852554873202   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=1500   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=1   Point=8   X2=250   X3=250   S11=-1.52403525603646   S12=0   S13=0   SMax=0   SMin=-1.52403525603646   SVM=1.52403525603646   IsS11Max=No _
+        IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=Yes   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=Yes   IsSVMMin=No   FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=3000   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=1   Point=0   X2=0   X3=0   S11=4.33680868994202E-17   S12=0.0258077336400549   S13=0.101195204362983   SMax=0.10443423050754 _
+        SMin=-0.10443423050754   SVM=0.180885393288418   IsS11Max=No   IsS12Max=Yes   IsS13Max=Yes   IsSMaxMax=Yes   IsSMinMax=No   IsSVMMax=Yes   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=Yes   IsSVMMin=No _
+        FrameElem=61-1   ElemStation=3000
+   Frame=61   Station=3000   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=1   Point=1   X2=-250   X3=-250   S11=1.33627665110936E-15   S12=0   S13=0   SMax=1.33627665110936E-15   SMin=0   SVM=1.33627665110936E-15 _
+        IsS11Max=Yes   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=Yes   IsSVMMax=No   IsS11Min=No   IsS12Min=Yes   IsS31Min=Yes   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=3000
+   Frame=61   Station=3000   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=1   Point=2   X2=-250   X3=0   S11=6.83186695660254E-16   S12=0   S13=0.101195204362983   SMax=0.101195204362983   SMin=-0.101195204362983 _
+        SVM=0.175275235439002   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=3000
+   Frame=61   Station=3000   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=1   Point=3   X2=-250   X3=250   S11=3.00967402111496E-17   S12=0   S13=0   SMax=3.00967402111496E-17   SMin=0   SVM=3.00967402111496E-17 _
+        IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=Yes   FrameElem=61-1   ElemStation=3000
+   Frame=61   Station=3000   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=1   Point=4   X2=0   X3=-250   S11=6.96458042348525E-16   S12=0.0258077336400549   S13=0   SMax=0.0258077336400553   SMin=-0.0258077336400546 _
+        SVM=0.0447003058927796   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=3000
+   Frame=61   Station=3000   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=1   Point=5   X2=0   X3=250   S11=-6.09721868549684E-16   S12=0.0258077336400549   S13=0   SMax=0.0258077336400546   SMin=-0.0258077336400552 _
+        SVM=0.0447003058927796   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=3000
+   Frame=61   Station=3000   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=1   Point=6   X2=250   X3=-250   S11=5.66394335876908E-17   S12=0   S13=0   SMax=5.66394335876908E-17   SMin=0   SVM=5.66394335876908E-17 _
+        IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=3000
+   Frame=61   Station=3000   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=1   Point=7   X2=250   X3=0   S11=-5.96450521861414E-16   S12=0   S13=0.101195204362983   SMax=0.101195204362983   SMin=-0.101195204362983 _
+        SVM=0.175275235439002   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=3000
+   Frame=61   Station=3000   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=1   Point=8   X2=250   X3=250   S11=-1.24954047731052E-15   S12=0   S13=0   SMax=0   SMin=-1.24954047731052E-15   SVM=1.24954047731052E-15 _
+        IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=Yes   IsS12Min=No   IsS31Min=No   IsSMaxMin=Yes   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=3000
+   Frame=61   Station=0   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=2   Point=0   X2=0   X3=0   S11=1.82145964977565E-16   S12=-0.101195204362983   S13=0.0258077336400549   SMax=0.10443423050754   SMin=-0.10443423050754 _
+        SVM=0.180885393288418   IsS11Max=No   IsS12Max=No   IsS13Max=Yes   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=Yes   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=Yes   FrameElem=61-1   ElemStation=0
+   Frame=61   Station=0   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=2   Point=1   X2=-250   X3=-250   S11=-1.80929929735027   S12=0   S13=0   SMax=0   SMin=-1.80929929735027   SVM=1.80929929735027   IsS11Max=No _
+        IsS12Max=Yes   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=Yes   IsSMaxMin=Yes   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=0
+   Frame=61   Station=0   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=2   Point=2   X2=-250   X3=0   S11=-2.42868490471159   S12=0   S13=0.0258077336400549   SMax=0.000274207627560585   SMin=-2.42895911233915 _
+        SVM=2.42909622776062   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=0
+   Frame=61   Station=0   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=2   Point=3   X2=-250   X3=250   S11=-3.04807051207291   S12=0   S13=0   SMax=0   SMin=-3.04807051207291   SVM=3.04807051207291   IsS11Max=No _
+        IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=Yes   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=Yes   IsSVMMin=No   FrameElem=61-1   ElemStation=0
+   Frame=61   Station=0   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=2   Point=4   X2=0   X3=-250   S11=0.619385607361319   S12=-0.101195204362983   S13=0   SMax=0.635499651425843   SMin=-0.0161140440645243 _
+        SVM=0.643707960774564   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=0
+   Frame=61   Station=0   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=2   Point=5   X2=0   X3=250   S11=-0.619385607361319   S12=-0.101195204362983   S13=0   SMax=0.0161140440645243   SMin=-0.635499651425843 _
+        SVM=0.643707960774564   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=0
+   Frame=61   Station=0   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=2   Point=6   X2=250   X3=-250   S11=3.04807051207291   S12=0   S13=0   SMax=3.04807051207291   SMin=0   SVM=3.04807051207291   IsS11Max=Yes _
+        IsS12Max=No   IsS13Max=No   IsSMaxMax=Yes   IsSMinMax=Yes   IsSVMMax=Yes   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=0
+   Frame=61   Station=0   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=2   Point=7   X2=250   X3=0   S11=2.42868490471159   S12=0   S13=0.0258077336400549   SMax=2.42895911233915   SMin=-0.000274207627560585 _
+        SVM=2.42909622776062   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=0
+   Frame=61   Station=0   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=2   Point=8   X2=250   X3=250   S11=1.80929929735027   S12=0   S13=0   SMax=1.80929929735027   SMin=0   SVM=1.80929929735027   IsS11Max=No _
+        IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=0
+   Frame=61   Station=1500   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=2   Point=0   X2=0   X3=0   S11=1.82145964977565E-16   S12=-0.101195204362983   S13=0.0258077336400549   SMax=0.10443423050754 _
+        SMin=-0.10443423050754   SVM=0.180885393288418   IsS11Max=No   IsS12Max=No   IsS13Max=Yes   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=Yes   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=Yes _
+        FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=1500   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=2   Point=1   X2=-250   X3=-250   S11=-0.904649648675136   S12=0   S13=0   SMax=0   SMin=-0.904649648675136   SVM=0.904649648675136   IsS11Max=No _
+        IsS12Max=Yes   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=Yes   IsSMaxMin=Yes   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=1500   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=2   Point=2   X2=-250   X3=0   S11=-1.2143424523558   S12=0   S13=0.0258077336400549   SMax=0.000548229668307587   SMin=-1.2148906820241 _
+        SVM=1.2151648896098   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=1500   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=2   Point=3   X2=-250   X3=250   S11=-1.52403525603646   S12=0   S13=0   SMax=0   SMin=-1.52403525603646   SVM=1.52403525603646   IsS11Max=No _
+        IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=Yes   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=Yes   IsSVMMin=No   FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=1500   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=2   Point=4   X2=0   X3=-250   S11=0.30969280368066   S12=-0.101195204362983   S13=0   SMax=0.339827150971051   SMin=-0.0301343472903913 _
+        SVM=0.355852554873202   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=1500   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=2   Point=5   X2=0   X3=250   S11=-0.309692803680659   S12=-0.101195204362983   S13=0   SMax=0.0301343472903914   SMin=-0.339827150971051 _
+        SVM=0.355852554873202   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=1500   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=2   Point=6   X2=250   X3=-250   S11=1.52403525603646   S12=0   S13=0   SMax=1.52403525603646   SMin=0   SVM=1.52403525603646   IsS11Max=Yes _
+        IsS12Max=No   IsS13Max=No   IsSMaxMax=Yes   IsSMinMax=Yes   IsSVMMax=Yes   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=1500   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=2   Point=7   X2=250   X3=0   S11=1.2143424523558   S12=0   S13=0.0258077336400549   SMax=1.2148906820241   SMin=-0.000548229668307587 _
+        SVM=1.2151648896098   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=1500   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=2   Point=8   X2=250   X3=250   S11=0.904649648675137   S12=0   S13=0   SMax=0.904649648675137   SMin=0   SVM=0.904649648675137   IsS11Max=No _
+        IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=3000   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=2   Point=0   X2=0   X3=0   S11=1.82145964977565E-16   S12=-0.101195204362983   S13=0.0258077336400549   SMax=0.10443423050754 _
+        SMin=-0.10443423050754   SVM=0.180885393288418   IsS11Max=No   IsS12Max=No   IsS13Max=Yes   IsSMaxMax=Yes   IsSMinMax=No   IsSVMMax=Yes   IsS11Min=No   IsS12Min=Yes   IsS31Min=No   IsSMaxMin=No   IsSMinMin=Yes   IsSVMMin=No _
+        FrameElem=61-1   ElemStation=3000
+   Frame=61   Station=3000   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=2   Point=1   X2=-250   X3=-250   S11=1.00881116527063E-15   S12=0   S13=0   SMax=1.00881116527063E-15   SMin=0   SVM=1.00881116527063E-15 _
+        IsS11Max=Yes   IsS12Max=Yes   IsS13Max=No   IsSMaxMax=No   IsSMinMax=Yes   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=Yes   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=3000
+   Frame=61   Station=3000   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=2   Point=2   X2=-250   X3=0   S11=8.51301234838786E-16   S12=0   S13=0.0258077336400549   SMax=0.0258077336400554   SMin=-0.0258077336400545 _
+        SVM=0.0447003058927796   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=3000
+   Frame=61   Station=3000   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=2   Point=3   X2=-250   X3=250   S11=6.93791304406943E-16   S12=0   S13=0   SMax=6.93791304406943E-16   SMin=0   SVM=6.93791304406943E-16 _
+        IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=3000
+   Frame=61   Station=3000   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=2   Point=4   X2=0   X3=-250   S11=3.39655895409408E-16   S12=-0.101195204362983   S13=0   SMax=0.101195204362983   SMin=-0.101195204362983 _
+        SVM=0.175275235439002   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=3000
+   Frame=61   Station=3000   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=2   Point=5   X2=0   X3=250   S11=2.46360345457219E-17   S12=-0.101195204362983   S13=0   SMax=0.101195204362983   SMin=-0.101195204362983 _
+        SVM=0.175275235439002   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=3000
+   Frame=61   Station=3000   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=2   Point=6   X2=250   X3=-250   S11=-3.29499374451814E-16   S12=0   S13=0   SMax=0   SMin=-3.29499374451814E-16   SVM=3.29499374451814E-16 _
+        IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=Yes   IsSMinMin=No   IsSVMMin=Yes   FrameElem=61-1   ElemStation=3000
+   Frame=61   Station=3000   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=2   Point=7   X2=250   X3=0   S11=-4.87009304883657E-16   S12=0   S13=0.0258077336400549   SMax=0.0258077336400547   SMin=-0.0258077336400552 _
+        SVM=0.0447003058927796   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=3000
+   Frame=61   Station=3000   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=2   Point=8   X2=250   X3=250   S11=-6.445192353155E-16   S12=0   S13=0   SMax=0   SMin=-6.445192353155E-16   SVM=6.445192353155E-16   IsS11Max=No _
+        IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=Yes   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=3000
+   Frame=61   Station=0   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=3   Point=0   X2=0   X3=0   S11=-10.2261998512983   S12=-2.5313973097341E-17   S13=-6.98481788712808E-18   SMax=0   SMin=-10.2261998512983 _
+        SVM=10.2261998512983   IsS11Max=Yes   IsS12Max=No   IsS13Max=No   IsSMaxMax=Yes   IsSMinMax=Yes   IsSVMMax=Yes   IsS11Min=Yes   IsS12Min=Yes   IsS31Min=Yes   IsSMaxMin=Yes   IsSMinMin=Yes   IsSVMMin=Yes   FrameElem=61-1   ElemStation=0
+   Frame=61   Station=0   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=3   Point=1   X2=-250   X3=-250   S11=-10.2261998512983   S12=0   S13=0   SMax=0   SMin=-10.2261998512983   SVM=10.2261998512983   IsS11Max=No _
+        IsS12Max=Yes   IsS13Max=Yes   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=0
+   Frame=61   Station=0   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=3   Point=2   X2=-250   X3=0   S11=-10.2261998512983   S12=0   S13=-6.98481788712808E-18   SMax=0   SMin=-10.2261998512983   SVM=10.2261998512983 _
+        IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=0
+   Frame=61   Station=0   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=3   Point=3   X2=-250   X3=250   S11=-10.2261998512983   S12=0   S13=0   SMax=0   SMin=-10.2261998512983   SVM=10.2261998512983   IsS11Max=No _
+        IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=0
+   Frame=61   Station=0   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=3   Point=4   X2=0   X3=-250   S11=-10.2261998512983   S12=-2.5313973097341E-17   S13=0   SMax=0   SMin=-10.2261998512983   SVM=10.2261998512983 _
+        IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=0
+   Frame=61   Station=0   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=3   Point=5   X2=0   X3=250   S11=-10.2261998512983   S12=-2.5313973097341E-17   S13=0   SMax=0   SMin=-10.2261998512983   SVM=10.2261998512983 _
+        IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=0
+   Frame=61   Station=0   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=3   Point=6   X2=250   X3=-250   S11=-10.2261998512983   S12=0   S13=0   SMax=0   SMin=-10.2261998512983   SVM=10.2261998512983   IsS11Max=No _
+        IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=0
+   Frame=61   Station=0   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=3   Point=7   X2=250   X3=0   S11=-10.2261998512983   S12=0   S13=-6.98481788712808E-18   SMax=0   SMin=-10.2261998512983   SVM=10.2261998512983 _
+        IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=0
+   Frame=61   Station=0   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=3   Point=8   X2=250   X3=250   S11=-10.2261998512983   S12=0   S13=0   SMax=0   SMin=-10.2261998512983   SVM=10.2261998512983   IsS11Max=No _
+        IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=0
+   Frame=61   Station=1500   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=3   Point=0   X2=0   X3=0   S11=-10.2261998512983   S12=-2.5313973097341E-17   S13=-6.98481788712808E-18   SMax=0   SMin=-10.2261998512983 _
+        SVM=10.2261998512983   IsS11Max=Yes   IsS12Max=No   IsS13Max=No   IsSMaxMax=Yes   IsSMinMax=Yes   IsSVMMax=Yes   IsS11Min=Yes   IsS12Min=Yes   IsS31Min=Yes   IsSMaxMin=Yes   IsSMinMin=Yes   IsSVMMin=Yes   FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=1500   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=3   Point=1   X2=-250   X3=-250   S11=-10.2261998512983   S12=0   S13=0   SMax=0   SMin=-10.2261998512983   SVM=10.2261998512983   IsS11Max=No _
+        IsS12Max=Yes   IsS13Max=Yes   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=1500   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=3   Point=2   X2=-250   X3=0   S11=-10.2261998512983   S12=0   S13=-6.98481788712808E-18   SMax=0   SMin=-10.2261998512983   SVM=10.2261998512983 _
+        IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=1500   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=3   Point=3   X2=-250   X3=250   S11=-10.2261998512983   S12=0   S13=0   SMax=0   SMin=-10.2261998512983   SVM=10.2261998512983   IsS11Max=No _
+        IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=1500   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=3   Point=4   X2=0   X3=-250   S11=-10.2261998512983   S12=-2.5313973097341E-17   S13=0   SMax=0   SMin=-10.2261998512983   SVM=10.2261998512983 _
+        IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=1500   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=3   Point=5   X2=0   X3=250   S11=-10.2261998512983   S12=-2.5313973097341E-17   S13=0   SMax=0   SMin=-10.2261998512983   SVM=10.2261998512983 _
+        IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=1500   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=3   Point=6   X2=250   X3=-250   S11=-10.2261998512983   S12=0   S13=0   SMax=0   SMin=-10.2261998512983   SVM=10.2261998512983   IsS11Max=No _
+        IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=1500   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=3   Point=7   X2=250   X3=0   S11=-10.2261998512983   S12=0   S13=-6.98481788712808E-18   SMax=0   SMin=-10.2261998512983   SVM=10.2261998512983 _
+        IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=1500   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=3   Point=8   X2=250   X3=250   S11=-10.2261998512983   S12=0   S13=0   SMax=0   SMin=-10.2261998512983   SVM=10.2261998512983   IsS11Max=No _
+        IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=3000   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=3   Point=0   X2=0   X3=0   S11=-10.2261998512983   S12=-2.5313973097341E-17   S13=-6.98481788712808E-18   SMax=0   SMin=-10.2261998512983 _
+        SVM=10.2261998512983   IsS11Max=Yes   IsS12Max=No   IsS13Max=No   IsSMaxMax=Yes   IsSMinMax=Yes   IsSVMMax=Yes   IsS11Min=Yes   IsS12Min=Yes   IsS31Min=Yes   IsSMaxMin=Yes   IsSMinMin=Yes   IsSVMMin=Yes   FrameElem=61-1   ElemStation=3000
+   Frame=61   Station=3000   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=3   Point=1   X2=-250   X3=-250   S11=-10.2261998512983   S12=0   S13=0   SMax=0   SMin=-10.2261998512983   SVM=10.2261998512983   IsS11Max=No _
+        IsS12Max=Yes   IsS13Max=Yes   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=3000
+   Frame=61   Station=3000   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=3   Point=2   X2=-250   X3=0   S11=-10.2261998512983   S12=0   S13=-6.98481788712808E-18   SMax=0   SMin=-10.2261998512983   SVM=10.2261998512983 _
+        IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=3000
+   Frame=61   Station=3000   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=3   Point=3   X2=-250   X3=250   S11=-10.2261998512983   S12=0   S13=0   SMax=0   SMin=-10.2261998512983   SVM=10.2261998512983   IsS11Max=No _
+        IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=3000
+   Frame=61   Station=3000   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=3   Point=4   X2=0   X3=-250   S11=-10.2261998512983   S12=-2.5313973097341E-17   S13=0   SMax=0   SMin=-10.2261998512983   SVM=10.2261998512983 _
+        IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=3000
+   Frame=61   Station=3000   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=3   Point=5   X2=0   X3=250   S11=-10.2261998512983   S12=-2.5313973097341E-17   S13=0   SMax=0   SMin=-10.2261998512983   SVM=10.2261998512983 _
+        IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=3000
+   Frame=61   Station=3000   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=3   Point=6   X2=250   X3=-250   S11=-10.2261998512983   S12=0   S13=0   SMax=0   SMin=-10.2261998512983   SVM=10.2261998512983   IsS11Max=No _
+        IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=3000
+   Frame=61   Station=3000   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=3   Point=7   X2=250   X3=0   S11=-10.2261998512983   S12=0   S13=-6.98481788712808E-18   SMax=0   SMin=-10.2261998512983   SVM=10.2261998512983 _
+        IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=3000
+   Frame=61   Station=3000   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=3   Point=8   X2=250   X3=250   S11=-10.2261998512983   S12=0   S13=0   SMax=0   SMin=-10.2261998512983   SVM=10.2261998512983   IsS11Max=No _
+        IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=3000
+   Frame=61   Station=0   OutputCase=LIVE   CaseType=LinStatic   Point=0   X2=0   X3=0   S11=0   S12=0   S13=0   SMax=0   SMin=0   SVM=0   IsS11Max=Yes   IsS12Max=Yes   IsS13Max=Yes   IsSMaxMax=Yes   IsSMinMax=Yes   IsSVMMax=Yes _
+        IsS11Min=Yes   IsS12Min=Yes   IsS31Min=Yes   IsSMaxMin=Yes   IsSMinMin=Yes   IsSVMMin=Yes   FrameElem=61-1   ElemStation=0
+   Frame=61   Station=0   OutputCase=LIVE   CaseType=LinStatic   Point=1   X2=-250   X3=-250   S11=0   S12=0   S13=0   SMax=0   SMin=0   SVM=0   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No _
+        IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=0
+   Frame=61   Station=0   OutputCase=LIVE   CaseType=LinStatic   Point=2   X2=-250   X3=0   S11=0   S12=0   S13=0   SMax=0   SMin=0   SVM=0   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No _
+        IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=0
+   Frame=61   Station=0   OutputCase=LIVE   CaseType=LinStatic   Point=3   X2=-250   X3=250   S11=0   S12=0   S13=0   SMax=0   SMin=0   SVM=0   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No _
+        IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=0
+   Frame=61   Station=0   OutputCase=LIVE   CaseType=LinStatic   Point=4   X2=0   X3=-250   S11=0   S12=0   S13=0   SMax=0   SMin=0   SVM=0   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No _
+        IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=0
+   Frame=61   Station=0   OutputCase=LIVE   CaseType=LinStatic   Point=5   X2=0   X3=250   S11=0   S12=0   S13=0   SMax=0   SMin=0   SVM=0   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No _
+        IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=0
+   Frame=61   Station=0   OutputCase=LIVE   CaseType=LinStatic   Point=6   X2=250   X3=-250   S11=0   S12=0   S13=0   SMax=0   SMin=0   SVM=0   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No _
+        IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=0
+   Frame=61   Station=0   OutputCase=LIVE   CaseType=LinStatic   Point=7   X2=250   X3=0   S11=0   S12=0   S13=0   SMax=0   SMin=0   SVM=0   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No _
+        IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=0
+   Frame=61   Station=0   OutputCase=LIVE   CaseType=LinStatic   Point=8   X2=250   X3=250   S11=0   S12=0   S13=0   SMax=0   SMin=0   SVM=0   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No _
+        IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=0
+   Frame=61   Station=1500   OutputCase=LIVE   CaseType=LinStatic   Point=0   X2=0   X3=0   S11=0   S12=0   S13=0   SMax=0   SMin=0   SVM=0   IsS11Max=Yes   IsS12Max=Yes   IsS13Max=Yes   IsSMaxMax=Yes   IsSMinMax=Yes   IsSVMMax=Yes _
+        IsS11Min=Yes   IsS12Min=Yes   IsS31Min=Yes   IsSMaxMin=Yes   IsSMinMin=Yes   IsSVMMin=Yes   FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=1500   OutputCase=LIVE   CaseType=LinStatic   Point=1   X2=-250   X3=-250   S11=0   S12=0   S13=0   SMax=0   SMin=0   SVM=0   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No _
+        IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=1500   OutputCase=LIVE   CaseType=LinStatic   Point=2   X2=-250   X3=0   S11=0   S12=0   S13=0   SMax=0   SMin=0   SVM=0   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No _
+        IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=1500   OutputCase=LIVE   CaseType=LinStatic   Point=3   X2=-250   X3=250   S11=0   S12=0   S13=0   SMax=0   SMin=0   SVM=0   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No _
+        IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=1500   OutputCase=LIVE   CaseType=LinStatic   Point=4   X2=0   X3=-250   S11=0   S12=0   S13=0   SMax=0   SMin=0   SVM=0   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No _
+        IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=1500   OutputCase=LIVE   CaseType=LinStatic   Point=5   X2=0   X3=250   S11=0   S12=0   S13=0   SMax=0   SMin=0   SVM=0   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No _
+        IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=1500   OutputCase=LIVE   CaseType=LinStatic   Point=6   X2=250   X3=-250   S11=0   S12=0   S13=0   SMax=0   SMin=0   SVM=0   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No _
+        IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=1500   OutputCase=LIVE   CaseType=LinStatic   Point=7   X2=250   X3=0   S11=0   S12=0   S13=0   SMax=0   SMin=0   SVM=0   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No _
+        IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=1500   OutputCase=LIVE   CaseType=LinStatic   Point=8   X2=250   X3=250   S11=0   S12=0   S13=0   SMax=0   SMin=0   SVM=0   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No _
+        IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=3000   OutputCase=LIVE   CaseType=LinStatic   Point=0   X2=0   X3=0   S11=0   S12=0   S13=0   SMax=0   SMin=0   SVM=0   IsS11Max=Yes   IsS12Max=Yes   IsS13Max=Yes   IsSMaxMax=Yes   IsSMinMax=Yes   IsSVMMax=Yes _
+        IsS11Min=Yes   IsS12Min=Yes   IsS31Min=Yes   IsSMaxMin=Yes   IsSMinMin=Yes   IsSVMMin=Yes   FrameElem=61-1   ElemStation=3000
+   Frame=61   Station=3000   OutputCase=LIVE   CaseType=LinStatic   Point=1   X2=-250   X3=-250   S11=0   S12=0   S13=0   SMax=0   SMin=0   SVM=0   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No _
+        IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=3000
+   Frame=61   Station=3000   OutputCase=LIVE   CaseType=LinStatic   Point=2   X2=-250   X3=0   S11=0   S12=0   S13=0   SMax=0   SMin=0   SVM=0   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No _
+        IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=3000
+   Frame=61   Station=3000   OutputCase=LIVE   CaseType=LinStatic   Point=3   X2=-250   X3=250   S11=0   S12=0   S13=0   SMax=0   SMin=0   SVM=0   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No _
+        IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=3000
+   Frame=61   Station=3000   OutputCase=LIVE   CaseType=LinStatic   Point=4   X2=0   X3=-250   S11=0   S12=0   S13=0   SMax=0   SMin=0   SVM=0   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No _
+        IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=3000
+   Frame=61   Station=3000   OutputCase=LIVE   CaseType=LinStatic   Point=5   X2=0   X3=250   S11=0   S12=0   S13=0   SMax=0   SMin=0   SVM=0   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No _
+        IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=3000
+   Frame=61   Station=3000   OutputCase=LIVE   CaseType=LinStatic   Point=6   X2=250   X3=-250   S11=0   S12=0   S13=0   SMax=0   SMin=0   SVM=0   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No _
+        IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=3000
+   Frame=61   Station=3000   OutputCase=LIVE   CaseType=LinStatic   Point=7   X2=250   X3=0   S11=0   S12=0   S13=0   SMax=0   SMin=0   SVM=0   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No _
+        IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=3000
+   Frame=61   Station=3000   OutputCase=LIVE   CaseType=LinStatic   Point=8   X2=250   X3=250   S11=0   S12=0   S13=0   SMax=0   SMin=0   SVM=0   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No _
+        IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=3000
+   Frame=61   Station=0   OutputCase=PUSH   CaseType=LinStatic   Point=0   X2=0   X3=0   S11=0   S12=0.006   S13=0   SMax=0.006   SMin=-0.006   SVM=0.0103923048454133   IsS11Max=No   IsS12Max=Yes   IsS13Max=Yes   IsSMaxMax=No   IsSMinMax=No _
+        IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=Yes   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=Yes   FrameElem=61-1   ElemStation=0
+   Frame=61   Station=0   OutputCase=PUSH   CaseType=LinStatic   Point=1   X2=-250   X3=-250   S11=0.144   S12=0   S13=0   SMax=0.144   SMin=0   SVM=0.144   IsS11Max=Yes   IsS12Max=No   IsS13Max=No   IsSMaxMax=Yes   IsSMinMax=Yes _
+        IsSVMMax=Yes   IsS11Min=No   IsS12Min=Yes   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=0
+   Frame=61   Station=0   OutputCase=PUSH   CaseType=LinStatic   Point=2   X2=-250   X3=0   S11=0.144   S12=0   S13=0   SMax=0.144   SMin=0   SVM=0.144   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No _
+        IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=0
+   Frame=61   Station=0   OutputCase=PUSH   CaseType=LinStatic   Point=3   X2=-250   X3=250   S11=0.144   S12=0   S13=0   SMax=0.144   SMin=0   SVM=0.144   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No _
+        IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=0
+   Frame=61   Station=0   OutputCase=PUSH   CaseType=LinStatic   Point=4   X2=0   X3=-250   S11=0   S12=0.006   S13=0   SMax=0.006   SMin=-0.006   SVM=0.0103923048454133   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No _
+        IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=0
+   Frame=61   Station=0   OutputCase=PUSH   CaseType=LinStatic   Point=5   X2=0   X3=250   S11=0   S12=0.006   S13=0   SMax=0.006   SMin=-0.006   SVM=0.0103923048454133   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No _
+        IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=0
+   Frame=61   Station=0   OutputCase=PUSH   CaseType=LinStatic   Point=6   X2=250   X3=-250   S11=-0.144   S12=0   S13=0   SMax=0   SMin=-0.144   SVM=0.144   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No _
+        IsSVMMax=No   IsS11Min=Yes   IsS12Min=No   IsS31Min=No   IsSMaxMin=Yes   IsSMinMin=Yes   IsSVMMin=No   FrameElem=61-1   ElemStation=0
+   Frame=61   Station=0   OutputCase=PUSH   CaseType=LinStatic   Point=7   X2=250   X3=0   S11=-0.144   S12=0   S13=0   SMax=0   SMin=-0.144   SVM=0.144   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No _
+        IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=0
+   Frame=61   Station=0   OutputCase=PUSH   CaseType=LinStatic   Point=8   X2=250   X3=250   S11=-0.144   S12=0   S13=0   SMax=0   SMin=-0.144   SVM=0.144   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No _
+        IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=0
+   Frame=61   Station=1500   OutputCase=PUSH   CaseType=LinStatic   Point=0   X2=0   X3=0   S11=0   S12=0.006   S13=0   SMax=0.006   SMin=-0.006   SVM=0.0103923048454133   IsS11Max=No   IsS12Max=Yes   IsS13Max=Yes   IsSMaxMax=No _
+        IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=Yes   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=Yes   FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=1500   OutputCase=PUSH   CaseType=LinStatic   Point=1   X2=-250   X3=-250   S11=0.072   S12=0   S13=0   SMax=0.072   SMin=0   SVM=0.072   IsS11Max=Yes   IsS12Max=No   IsS13Max=No   IsSMaxMax=Yes   IsSMinMax=Yes _
+        IsSVMMax=Yes   IsS11Min=No   IsS12Min=Yes   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=1500   OutputCase=PUSH   CaseType=LinStatic   Point=2   X2=-250   X3=0   S11=0.072   S12=0   S13=0   SMax=0.072   SMin=0   SVM=0.072   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No _
+        IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=1500   OutputCase=PUSH   CaseType=LinStatic   Point=3   X2=-250   X3=250   S11=0.072   S12=0   S13=0   SMax=0.072   SMin=0   SVM=0.072   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No _
+        IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=1500   OutputCase=PUSH   CaseType=LinStatic   Point=4   X2=0   X3=-250   S11=0   S12=0.006   S13=0   SMax=0.006   SMin=-0.006   SVM=0.0103923048454133   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No _
+        IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=1500   OutputCase=PUSH   CaseType=LinStatic   Point=5   X2=0   X3=250   S11=0   S12=0.006   S13=0   SMax=0.006   SMin=-0.006   SVM=0.0103923048454133   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No _
+        IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=1500   OutputCase=PUSH   CaseType=LinStatic   Point=6   X2=250   X3=-250   S11=-0.072   S12=0   S13=0   SMax=0   SMin=-0.072   SVM=0.072   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No _
+        IsSVMMax=No   IsS11Min=Yes   IsS12Min=No   IsS31Min=No   IsSMaxMin=Yes   IsSMinMin=Yes   IsSVMMin=No   FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=1500   OutputCase=PUSH   CaseType=LinStatic   Point=7   X2=250   X3=0   S11=-0.072   S12=0   S13=0   SMax=0   SMin=-0.072   SVM=0.072   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No _
+        IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=1500   OutputCase=PUSH   CaseType=LinStatic   Point=8   X2=250   X3=250   S11=-0.072   S12=0   S13=0   SMax=0   SMin=-0.072   SVM=0.072   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No   IsSMinMax=No _
+        IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=1500
+   Frame=61   Station=3000   OutputCase=PUSH   CaseType=LinStatic   Point=0   X2=0   X3=0   S11=0   S12=0.006   S13=0   SMax=0.006   SMin=-0.006   SVM=0.0103923048454133   IsS11Max=No   IsS12Max=Yes   IsS13Max=Yes   IsSMaxMax=Yes _
+        IsSMinMax=No   IsSVMMax=Yes   IsS11Min=No   IsS12Min=No   IsS31Min=Yes   IsSMaxMin=No   IsSMinMin=Yes   IsSVMMin=No   FrameElem=61-1   ElemStation=3000
+   Frame=61   Station=3000   OutputCase=PUSH   CaseType=LinStatic   Point=1   X2=-250   X3=-250   S11=1.93613232113421E-17   S12=0   S13=0   SMax=1.93613232113421E-17   SMin=0   SVM=1.93613232113421E-17   IsS11Max=Yes   IsS12Max=No _
+        IsS13Max=No   IsSMaxMax=No   IsSMinMax=Yes   IsSVMMax=No   IsS11Min=No   IsS12Min=Yes   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=Yes   FrameElem=61-1   ElemStation=3000
+   Frame=61   Station=3000   OutputCase=PUSH   CaseType=LinStatic   Point=2   X2=-250   X3=0   S11=1.93613232113421E-17   S12=0   S13=0   SMax=1.93613232113421E-17   SMin=0   SVM=1.93613232113421E-17   IsS11Max=No   IsS12Max=No _
+        IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=3000
+   Frame=61   Station=3000   OutputCase=PUSH   CaseType=LinStatic   Point=3   X2=-250   X3=250   S11=1.93613232113421E-17   S12=0   S13=0   SMax=1.93613232113421E-17   SMin=0   SVM=1.93613232113421E-17   IsS11Max=No   IsS12Max=No _
+        IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=3000
+   Frame=61   Station=3000   OutputCase=PUSH   CaseType=LinStatic   Point=4   X2=0   X3=-250   S11=0   S12=0.006   S13=0   SMax=0.006   SMin=-0.006   SVM=0.0103923048454133   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No _
+        IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=3000
+   Frame=61   Station=3000   OutputCase=PUSH   CaseType=LinStatic   Point=5   X2=0   X3=250   S11=0   S12=0.006   S13=0   SMax=0.006   SMin=-0.006   SVM=0.0103923048454133   IsS11Max=No   IsS12Max=No   IsS13Max=No   IsSMaxMax=No _
+        IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=3000
+   Frame=61   Station=3000   OutputCase=PUSH   CaseType=LinStatic   Point=6   X2=250   X3=-250   S11=-1.93613232113421E-17   S12=0   S13=0   SMax=0   SMin=-1.93613232113421E-17   SVM=1.93613232113421E-17   IsS11Max=No   IsS12Max=No _
+        IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=Yes   IsS12Min=No   IsS31Min=No   IsSMaxMin=Yes   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=3000
+   Frame=61   Station=3000   OutputCase=PUSH   CaseType=LinStatic   Point=7   X2=250   X3=0   S11=-1.93613232113421E-17   S12=0   S13=0   SMax=0   SMin=-1.93613232113421E-17   SVM=1.93613232113421E-17   IsS11Max=No   IsS12Max=No _
+        IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=3000
+   Frame=61   Station=3000   OutputCase=PUSH   CaseType=LinStatic   Point=8   X2=250   X3=250   S11=-1.93613232113421E-17   S12=0   S13=0   SMax=0   SMin=-1.93613232113421E-17   SVM=1.93613232113421E-17   IsS11Max=No   IsS12Max=No _
+        IsS13Max=No   IsSMaxMax=No   IsSMinMax=No   IsSVMMax=No   IsS11Min=No   IsS12Min=No   IsS31Min=No   IsSMaxMin=No   IsSMinMin=No   IsSVMMin=No   FrameElem=61-1   ElemStation=3000
+ 
+TABLE:  "ELEMENT JOINT FORCES - FRAMES"
+   Frame=61   Joint=37   OutputCase=DEAD   CaseType=LinStatic   F1=0   F2=0   F3=1518750   M1=0   M2=0   M3=0   FrameElem=61-1
+   Frame=61   Joint=39   OutputCase=DEAD   CaseType=LinStatic   F1=0   F2=0   F3=-1500000   M1=0   M2=0   M3=0   FrameElem=61-1
+   Frame=61   Joint=37   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=1   F1=-4301.28894000915   F2=-16865.8673938305   F3=-1.0842021724855E-11   M1=50597602.1814915   M2=-12903866.8200275   M3=0   FrameElem=61-1
+   Frame=61   Joint=39   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=1   F1=4301.28894000915   F2=16865.8673938305   F3=1.0842021724855E-11   M1=-1.49011611938477E-08   M2=1.11758708953857E-08   M3=0   FrameElem=61-1
+   Frame=61   Joint=37   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=2   F1=16865.8673938305   F2=-4301.28894000916   F3=-4.55364912443912E-11   M1=12903866.8200275   M2=50597602.1814915   M3=0   FrameElem=61-1
+   Frame=61   Joint=39   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=2   F1=-16865.8673938305   F2=4301.28894000916   F3=4.55364912443912E-11   M1=0   M2=1.49011611938477E-08   M3=0   FrameElem=61-1
+   Frame=61   Joint=37   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=3   F1=4.2189955162235E-12   F2=1.16413631452135E-12   F3=2556549.96282457   M1=-8.1536654236682E-10   M2=4.62585934507935E-09   M3=0   FrameElem=61-1
+   Frame=61   Joint=39   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=3   F1=-4.2189955162235E-12   F2=-1.16413631452135E-12   F3=-2556549.96282457   M1=-2.67704240119722E-09   M2=8.03112720359114E-09   M3=0   FrameElem=61-1
+   Frame=61   Joint=37   OutputCase=LIVE   CaseType=LinStatic   F1=0   F2=0   F3=0   M1=0   M2=0   M3=0   FrameElem=61-1
+   Frame=61   Joint=39   OutputCase=LIVE   CaseType=LinStatic   F1=0   F2=0   F3=0   M1=0   M2=0   M3=0   FrameElem=61-1
+   Frame=61   Joint=37   OutputCase=PUSH   CaseType=LinStatic   F1=-1000   F2=0   F3=0   M1=0   M2=-3000000   M3=0   FrameElem=61-1
+   Frame=61   Joint=39   OutputCase=PUSH   CaseType=LinStatic   F1=1000   F2=0   F3=0   M1=0   M2=0   M3=0   FrameElem=61-1
+ 
+TABLE:  "OBJECTS AND ELEMENTS - JOINTS"
+   JointElem=37   JointObject=37   GlobalX=0   GlobalY=0   GlobalZ=0
+   JointElem=39   JointObject=39   GlobalX=0   GlobalY=0   GlobalZ=3000
+ 
+TABLE:  "OBJECTS AND ELEMENTS - FRAMES"
+   FrameElem=61-1   FrameObject=61   ElemJtI=37   ElemJtJ=39
+ 
+TABLE:  "BASE REACTIONS"
+   OutputCase=DEAD   CaseType=LinStatic   GlobalFX=0   GlobalFY=0   GlobalFZ=1518750   GlobalMX=0   GlobalMY=0   GlobalMZ=0   GlobalX=0   GlobalY=0   GlobalZ=0   XCentroidFX=0   YCentroidFX=0   ZCentroidFX=0   XCentroidFY=0   YCentroidFY=0 _
+        ZCentroidFY=0   XCentroidFZ=0   YCentroidFZ=0   ZCentroidFZ=0
+   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=1   GlobalFX=-4301.28894000915   GlobalFY=-16865.8673938305   GlobalFZ=-1.0842021724855E-11   GlobalMX=50597602.1814915   GlobalMY=-12903866.8200275   GlobalMZ=0   GlobalX=0 _
+        GlobalY=0   GlobalZ=0   XCentroidFX=0   YCentroidFX=0   ZCentroidFX=0   XCentroidFY=0   YCentroidFY=0   ZCentroidFY=0   XCentroidFZ=0   YCentroidFZ=0   ZCentroidFZ=0
+   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=2   GlobalFX=16865.8673938305   GlobalFY=-4301.28894000916   GlobalFZ=-4.55364912443912E-11   GlobalMX=12903866.8200275   GlobalMY=50597602.1814915   GlobalMZ=0   GlobalX=0 _
+        GlobalY=0   GlobalZ=0   XCentroidFX=0   YCentroidFX=0   ZCentroidFX=0   XCentroidFY=0   YCentroidFY=0   ZCentroidFY=0   XCentroidFZ=0   YCentroidFZ=0   ZCentroidFZ=0
+   OutputCase=MODAL   CaseType=LinModal   StepType=Mode   StepNum=3   GlobalFX=4.2189955162235E-12   GlobalFY=1.16413631452135E-12   GlobalFZ=2556549.96282457   GlobalMX=-8.1536654236682E-10   GlobalMY=4.62585934507935E-09   GlobalMZ=0 _
+        GlobalX=0   GlobalY=0   GlobalZ=0   XCentroidFX=0   YCentroidFX=0   ZCentroidFX=0   XCentroidFY=0   YCentroidFY=0   ZCentroidFY=0   XCentroidFZ=0   YCentroidFZ=0   ZCentroidFZ=0
+   OutputCase=LIVE   CaseType=LinStatic   GlobalFX=0   GlobalFY=0   GlobalFZ=0   GlobalMX=0   GlobalMY=0   GlobalMZ=0   GlobalX=0   GlobalY=0   GlobalZ=0   XCentroidFX=0   YCentroidFX=0   ZCentroidFX=0   XCentroidFY=0   YCentroidFY=0 _
+        ZCentroidFY=0   XCentroidFZ=0   YCentroidFZ=0   ZCentroidFZ=0
+   OutputCase=PUSH   CaseType=LinStatic   GlobalFX=-1000   GlobalFY=0   GlobalFZ=0   GlobalMX=0   GlobalMY=-3000000   GlobalMZ=0   GlobalX=0   GlobalY=0   GlobalZ=0   XCentroidFX=0   YCentroidFX=0   ZCentroidFX=0   XCentroidFY=0 _
+        YCentroidFY=0   ZCentroidFY=0   XCentroidFZ=0   YCentroidFZ=0   ZCentroidFZ=0
+ 
+TABLE:  "MODAL PERIODS AND FREQUENCIES"
+   OutputCase=MODAL   StepType=Mode   StepNum=1   Period=0.0470952297635436   Frequency=21.2335730183463   CircFreq=133.414474007798   Eigenvalue=17799.4218747775
+   OutputCase=MODAL   StepType=Mode   StepNum=2   Period=0.0470952297635436   Frequency=21.2335730183463   CircFreq=133.414474007798   Eigenvalue=17799.4218747775
+   OutputCase=MODAL   StepType=Mode   StepNum=3   Period=0.00388593550302198   Frequency=257.338290669603   CircFreq=1616.90416690996   Eigenvalue=2614379.08497079
+ 
+TABLE:  "MODAL LOAD PARTICIPATION RATIOS"
+   OutputCase=MODAL   ItemType=Acceleration   Item=UX   Static=100   Dynamic=100
+   OutputCase=MODAL   ItemType=Acceleration   Item=UY   Static=100   Dynamic=100
+   OutputCase=MODAL   ItemType=Acceleration   Item=UZ   Static=99.9999999998672   Dynamic=100
+ 
+TABLE:  "MODAL PARTICIPATING MASS RATIOS"
+   OutputCase=MODAL   StepType=Mode   StepNum=1   Period=0.0470952297635436   UX=0.0610680416681554   UY=0.938931958331845   UZ=1.7985063567581E-35   SumUX=0.0610680416681554   SumUY=0.938931958331845   SumUZ=1.7985063567581E-35 _
+        RX=0.938931958331845   RY=0.0610680416681554   RZ=0   SumRX=0.938931958331845   SumRY=0.0610680416681554   SumRZ=0
+   OutputCase=MODAL   StepType=Mode   StepNum=2   Period=0.0470952297635436   UX=0.938931958331845   UY=0.0610680416681554   UZ=3.17256521332129E-34   SumUX=1   SumUY=1   SumUZ=3.3524158489971E-34   RX=0.0610680416681554 _
+        RY=0.938931958331845   RZ=0   SumRX=1   SumRY=1   SumRZ=0
+   OutputCase=MODAL   StepType=Mode   StepNum=3   Period=0.00388593550302198   UX=2.6280503466734E-34   UY=7.24365502323238E-35   UZ=1   SumUX=1   SumUY=1   SumUZ=1   RX=7.24365502323238E-35   RY=2.6280503466734E-34   RZ=0   SumRX=1 _
+        SumRY=1   SumRZ=0
+ 
+TABLE:  "MODAL PARTICIPATION FACTORS"
+   OutputCase=MODAL   StepType=Mode   StepNum=1   Period=0.0470952297635436   UX=-0.241653294712018   UY=-0.947551415573227   UZ=-4.14707330975706E-18   RX=1421.32712335984   RY=-362.479942068028   RZ=0   ModalMass=1   ModalStiff=17799.4218747775
+   OutputCase=MODAL   StepType=Mode   StepNum=2   Period=0.0470952297635436   UX=0.947551415573227   UY=-0.241653294712018   UZ=-1.74177079009796E-17   RX=362.479942068028   RY=1421.32712335984   RZ=0   ModalMass=1   ModalStiff=17799.4218747775
+   OutputCase=MODAL   StepType=Mode   StepNum=3   Period=0.00388593550302198   UX=1.5852675307362E-17   UY=-8.32270696105898E-18   UZ=0.977880360780397   RX=1.24840604415885E-14   RY=2.3779012961043E-14   RZ=0   ModalMass=1   ModalStiff=2614379.08497079
+ 
+END TABLE DATA
