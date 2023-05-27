@@ -462,7 +462,7 @@ analyze 10
 首先，在做本例之前，做一个受到轴向压力的混凝土柱，并对其做push分析。
 
 <div align="center">
-<img src="">
+<img src="https://github.com/2068934868/image/blob/5a1ea0e0f6271c91ad9146b1f4b9203138ca0363/opensees/03-1.png">
 </div>
 
 建模TCL代码如下：
@@ -624,17 +624,17 @@ analyze 100
 在eto进行框架截面非线性设置时，其中rebar setting中的钢筋面积指的是X方向以及Y方向顶部或者底部（或者左侧或者右侧，即一半）的钢筋总面积，divide代表将截面分成多少份，Bar Num代表该方向顶部或底部有多少根钢筋。
 
 <div align="center">
-<img src="">
+<img src="https://github.com/2068934868/image/blob/5a1ea0e0f6271c91ad9146b1f4b9203138ca0363/opensees/03-2.png">
 </div>
 
 下图为弹性材料的push曲线，可以看出，此处采用的是弹性分析，其曲线是一条直线。
 
 <div align="center">
-<img src="">
+<img src="https://github.com/2068934868/image/blob/5a1ea0e0f6271c91ad9146b1f4b9203138ca0363/opensees/03-3.png">
 </div>
 
 下图为设置了非线性材料后的push曲线，可以看出，其进入了非线性。
 
 <div align="center">
-<img src="">
+<img src="https://github.com/2068934868/image/blob/5a1ea0e0f6271c91ad9146b1f4b9203138ca0363/opensees/03-4.png">
 </div>
