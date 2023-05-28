@@ -124,11 +124,13 @@ TABLE:  "MASS SOURCE"
 TABLE:  "MATERIAL PROPERTIES 01 - GENERAL"
    Material=C30   Type=Concrete   Grade="GB50010 C30"   SymType=Isotropic   TempDepend=No   Color=Yellow   GUID=9da26e0b-e31d-44c9-aee6-bee56d748b0d   Notes="GB GB50010 C30 2023/5/27 16:28:31"
    Material=HPB300   Type=Rebar   Grade="GB50010 HPB300"   SymType=Uniaxial   TempDepend=No   Color=Red   GUID=408f72ed-4ed3-40bc-9496-89ed8731702a   Notes="GB GB50010 HPB300 2023/5/27 16:34:49"
+   Material=JTG-fpk1470   Type=Tendon   Grade="JTGD62 fpk1470"   SymType=Uniaxial   TempDepend=No   Color=Magenta   GUID=4ecfe46d-823c-438f-8171-b5cef3a98274   Notes="JTG JTGD62 fpk1470 2023/5/27 16:40:53"
    Material=Q355   Type=Steel   Grade=Q355   SymType=Isotropic   TempDepend=No   Color=Magenta   Notes="GB Q355 2023/5/27 16:28:31"
  
 TABLE:  "MATERIAL PROPERTIES 02 - BASIC MECHANICAL PROPERTIES"
    Material=C30   UnitWeight=2.5E-05   UnitMass=2.55E-09   E1=30000   G12=12500   U12=0.2   A1=1E-05
    Material=HPB300   UnitWeight=7.7E-05   UnitMass=7.85E-09   E1=210000   A1=1.17E-05
+   Material=JTG-fpk1470   UnitWeight=7.7E-05   UnitMass=7.85E-09   E1=195000   A1=1.17E-05
    Material=Q355   UnitWeight=7.7E-05   UnitMass=7.85E-09   E1=206000   G12=79230.7692307692   U12=0.3   A1=1.2E-05
  
 TABLE:  "MATERIAL PROPERTIES 03A - STEEL DATA"
@@ -140,18 +142,24 @@ TABLE:  "MATERIAL PROPERTIES 03B - CONCRETE DATA"
 TABLE:  "MATERIAL PROPERTIES 03E - REBAR DATA"
    Material=HPB300   Fy=300   Fu=420   EffFy=330   EffFu=460   SSCurveOpt=Simple   SSHysType=Kinematic   SHard=0.01   SCap=0.1   FinalSlope=-0.1   UseCTDef=No   CoupModType="Von Mises"
  
+TABLE:  "MATERIAL PROPERTIES 03F - TENDON DATA"
+   Material=JTG-fpk1470   Fy=1470   Fu=1690   SSCurveOpt="250 ksi"   SSHysType=Kinematic   FinalSlope=-0.1   CoupModType="Von Mises"
+ 
 TABLE:  "MATERIAL PROPERTIES 03J - COUPLED NONLINEAR VON MISES DATA"
    Material=HPB300   YieldStress=330   LinIsoHard=No   LinKinHard=No   NLIsoSaHard=No
+   Material=JTG-fpk1470   YieldStress=1470   LinIsoHard=No   LinKinHard=No   NLIsoSaHard=No
    Material=Q355   YieldStress=380   LinIsoHard=No   LinKinHard=No   NLIsoSaHard=No
  
 TABLE:  "MATERIAL PROPERTIES 06 - DAMPING PARAMETERS"
    Material=C30   ModalRatio=0   VisMass=0   VisStiff=0   HysMass=0   HysStiff=0
    Material=HPB300   ModalRatio=0   VisMass=0   VisStiff=0   HysMass=0   HysStiff=0
+   Material=JTG-fpk1470   ModalRatio=0   VisMass=0   VisStiff=0   HysMass=0   HysStiff=0
    Material=Q355   ModalRatio=0   VisMass=0   VisStiff=0   HysMass=0   HysStiff=0
  
 TABLE:  "MATERIAL PROPERTIES 09 - ACCEPTANCE CRITERIA"
    Material=C30   IOTens=0.01   LSTens=0.02   CPTens=0.05   IOComp=-0.003   LSComp=-0.006   CPComp=-0.015   IgnoreTens=Yes
    Material=HPB300   IOTens=0.01   LSTens=0.02   CPTens=0.05   IOComp=-0.005   LSComp=-0.01   CPComp=-0.02
+   Material=JTG-fpk1470   IOTens=0.015   LSTens=0.023   CPTens=0.03   IOComp=-0.015   LSComp=-0.023   CPComp=-0.03
    Material=Q355   IOTens=0.01   LSTens=0.02   CPTens=0.05   IOComp=-0.005   LSComp=-0.01   CPComp=-0.02
  
 TABLE:  "OPTIONS - COLORS - DISPLAY"
@@ -252,5 +260,8 @@ TABLE:  "REBAR SIZES"
    RebarID=N28   Area=616.000043275356   Diameter=28.0000017881393
    RebarID=N32   Area=804.00006172657   Diameter=31.9999998807907
    RebarID=N36   Area=1020.00001747131   Diameter=36.000001001358
+ 
+TABLE:  "SOLID PROPERTY DEFINITIONS"
+   SolidProp=Solid1   Material=C30   MatAngleA=0   MatAngleB=0   MatAngleC=0   InComp=Yes   Color=Yellow
  
 END TABLE DATA
