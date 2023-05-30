@@ -1,0 +1,18 @@
+
+
+ ETABS Ultimate C 64-bit 20.3.0 Build 2929 (Analysis Build 9907/64)             
+ File: E:\GitHub\opensees\opensees\OpenSEES_ÊµÀý6\ETABS\EXAM06.OUT              
+                                                                     
+                                                                       
+
+ D I S P L A C E M E N T   D E G R E E S   O F   F R E E D O M
+
+         (A) = Active DOF, equilibrium equation
+         (-) = Restrained DOF, reaction computed
+         (+) = Constrained DOF
+         (>) = External substructure DOF
+         ( ) = Null DOF
+
+  JOINTS              UX  UY  UZ  RX  RY  RZ
+       1 TO      31    A   A   A   A   A   A
+      32 TO      37    -   -   -   -   -   -

@@ -1,0 +1,223 @@
+wipe
+puts "System"
+model basic -ndm 3 -ndf 6
+puts "restraint"
+node 1 0.000E+000 0.000E+000 1.000E+004
+node 2 0.000E+000 0.000E+000 1.300E+004
+node 3 0.000E+000 4.500E+003 1.000E+004
+node 4 0.000E+000 4.500E+003 1.300E+004
+node 5 4.500E+003 0.000E+000 1.000E+004
+node 6 4.500E+003 0.000E+000 1.300E+004
+node 7 4.500E+003 4.500E+003 1.000E+004
+node 8 4.500E+003 4.500E+003 1.300E+004
+node 9 9.000E+003 0.000E+000 1.000E+004
+node 10 9.000E+003 0.000E+000 1.300E+004
+node 11 9.000E+003 4.500E+003 1.000E+004
+node 12 9.000E+003 4.500E+003 1.300E+004
+node 13 0.000E+000 0.000E+000 7.000E+003
+node 14 0.000E+000 4.500E+003 7.000E+003
+node 15 4.500E+003 0.000E+000 7.000E+003
+node 16 4.500E+003 4.500E+003 7.000E+003
+node 17 9.000E+003 0.000E+000 7.000E+003
+node 18 9.000E+003 4.500E+003 7.000E+003
+node 19 0.000E+000 0.000E+000 4.000E+003
+node 20 0.000E+000 4.500E+003 4.000E+003
+node 21 4.500E+003 0.000E+000 4.000E+003
+node 22 4.500E+003 4.500E+003 4.000E+003
+node 23 9.000E+003 0.000E+000 4.000E+003
+node 24 9.000E+003 4.500E+003 4.000E+003
+node 25 0.000E+000 0.000E+000 0.000E+000
+node 26 0.000E+000 4.500E+003 0.000E+000
+node 27 4.500E+003 0.000E+000 0.000E+000
+node 28 4.500E+003 4.500E+003 0.000E+000
+node 29 9.000E+003 0.000E+000 0.000E+000
+node 30 9.000E+003 4.500E+003 0.000E+000
+puts "rigidDiaphragm"
+puts "mass"
+mass 1 4.738E+002 4.738E+002 0.000E+000 0.000E+000 0.000E+000 0.000E+000
+mass 2 3.896E+002 3.896E+002 0.000E+000 0.000E+000 0.000E+000 0.000E+000
+mass 3 4.738E+002 4.738E+002 0.000E+000 0.000E+000 0.000E+000 0.000E+000
+mass 4 3.896E+002 3.896E+002 0.000E+000 0.000E+000 0.000E+000 0.000E+000
+mass 5 7.118E+002 7.118E+002 0.000E+000 0.000E+000 0.000E+000 0.000E+000
+mass 6 6.276E+002 6.276E+002 0.000E+000 0.000E+000 0.000E+000 0.000E+000
+mass 7 7.118E+002 7.118E+002 0.000E+000 0.000E+000 0.000E+000 0.000E+000
+mass 8 6.276E+002 6.276E+002 0.000E+000 0.000E+000 0.000E+000 0.000E+000
+mass 9 4.738E+002 4.738E+002 0.000E+000 0.000E+000 0.000E+000 0.000E+000
+mass 10 3.896E+002 3.896E+002 0.000E+000 0.000E+000 0.000E+000 0.000E+000
+mass 11 4.738E+002 4.738E+002 0.000E+000 0.000E+000 0.000E+000 0.000E+000
+mass 12 3.896E+002 3.896E+002 0.000E+000 0.000E+000 0.000E+000 0.000E+000
+mass 13 4.738E+002 4.738E+002 0.000E+000 0.000E+000 0.000E+000 0.000E+000
+mass 14 4.738E+002 4.738E+002 0.000E+000 0.000E+000 0.000E+000 0.000E+000
+mass 15 7.118E+002 7.118E+002 0.000E+000 0.000E+000 0.000E+000 0.000E+000
+mass 16 7.118E+002 7.118E+002 0.000E+000 0.000E+000 0.000E+000 0.000E+000
+mass 17 4.738E+002 4.738E+002 0.000E+000 0.000E+000 0.000E+000 0.000E+000
+mass 18 4.738E+002 4.738E+002 0.000E+000 0.000E+000 0.000E+000 0.000E+000
+mass 19 5.019E+002 5.019E+002 0.000E+000 0.000E+000 0.000E+000 0.000E+000
+mass 20 5.019E+002 5.019E+002 0.000E+000 0.000E+000 0.000E+000 0.000E+000
+mass 21 7.399E+002 7.399E+002 0.000E+000 0.000E+000 0.000E+000 0.000E+000
+mass 22 7.399E+002 7.399E+002 0.000E+000 0.000E+000 0.000E+000 0.000E+000
+mass 23 5.019E+002 5.019E+002 0.000E+000 0.000E+000 0.000E+000 0.000E+000
+mass 24 5.019E+002 5.019E+002 0.000E+000 0.000E+000 0.000E+000 0.000E+000
+mass 25 1.123E+002 1.123E+002 0.000E+000 0.000E+000 0.000E+000 0.000E+000
+mass 26 1.123E+002 1.123E+002 0.000E+000 0.000E+000 0.000E+000 0.000E+000
+mass 27 1.123E+002 1.123E+002 0.000E+000 0.000E+000 0.000E+000 0.000E+000
+mass 28 1.123E+002 1.123E+002 0.000E+000 0.000E+000 0.000E+000 0.000E+000
+mass 29 1.123E+002 1.123E+002 0.000E+000 0.000E+000 0.000E+000 0.000E+000
+mass 30 1.123E+002 1.123E+002 0.000E+000 0.000E+000 0.000E+000 0.000E+000
+puts "node"
+fix 25 1 1 1 1 1 1;
+fix 26 1 1 1 1 1 1;
+fix 27 1 1 1 1 1 1;
+fix 28 1 1 1 1 1 1;
+fix 29 1 1 1 1 1 1;
+fix 30 1 1 1 1 1 1;
+puts "Equal DOF"
+puts "material"
+uniaxialMaterial Elastic 1 1.999E+005
+uniaxialMaterial Elastic 2 2.680E+004
+uniaxialMaterial Elastic 3 1.999E+005
+
+puts "transformation"
+geomTransf Linear 1 1.000 0.000 0.000 
+geomTransf Linear 2 1.000 0.000 0.000 
+geomTransf Linear 3 1.000 0.000 0.000 
+geomTransf Linear 4 1.000 0.000 0.000 
+geomTransf Linear 5 1.000 0.000 0.000 
+geomTransf Linear 6 1.000 0.000 0.000 
+geomTransf Linear 7 0.000 0.000 1.000 
+geomTransf Linear 8 0.000 0.000 1.000 
+geomTransf Linear 9 0.000 0.000 1.000 
+geomTransf Linear 10 0.000 0.000 1.000 
+geomTransf Linear 11 0.000 0.000 1.000 
+geomTransf Linear 12 0.000 0.000 1.000 
+geomTransf Linear 13 0.000 0.000 1.000 
+geomTransf Linear 14 1.000 0.000 0.000 
+geomTransf Linear 15 1.000 0.000 0.000 
+geomTransf Linear 16 1.000 0.000 0.000 
+geomTransf Linear 17 1.000 0.000 0.000 
+geomTransf Linear 18 1.000 0.000 0.000 
+geomTransf Linear 19 1.000 0.000 0.000 
+geomTransf Linear 20 0.000 0.000 1.000 
+geomTransf Linear 21 0.000 0.000 1.000 
+geomTransf Linear 22 0.000 0.000 1.000 
+geomTransf Linear 23 0.000 0.000 1.000 
+geomTransf Linear 24 0.000 0.000 1.000 
+geomTransf Linear 25 0.000 0.000 1.000 
+geomTransf Linear 26 0.000 0.000 1.000 
+geomTransf Linear 27 1.000 0.000 0.000 
+geomTransf Linear 28 1.000 0.000 0.000 
+geomTransf Linear 29 1.000 0.000 0.000 
+geomTransf Linear 30 1.000 0.000 0.000 
+geomTransf Linear 31 1.000 0.000 0.000 
+geomTransf Linear 32 1.000 0.000 0.000 
+geomTransf Linear 33 0.000 0.000 1.000 
+geomTransf Linear 34 0.000 0.000 1.000 
+geomTransf Linear 35 0.000 0.000 1.000 
+geomTransf Linear 36 0.000 0.000 1.000 
+geomTransf Linear 37 0.000 0.000 1.000 
+geomTransf Linear 38 0.000 0.000 1.000 
+geomTransf Linear 39 0.000 0.000 1.000 
+geomTransf Linear 40 1.000 0.000 0.000 
+geomTransf Linear 41 1.000 0.000 0.000 
+geomTransf Linear 42 1.000 0.000 0.000 
+geomTransf Linear 43 1.000 0.000 0.000 
+geomTransf Linear 44 1.000 0.000 0.000 
+geomTransf Linear 45 1.000 0.000 0.000 
+geomTransf Linear 46 0.000 0.000 1.000 
+geomTransf Linear 47 0.000 0.000 1.000 
+geomTransf Linear 48 0.000 0.000 1.000 
+geomTransf Linear 49 0.000 0.000 1.000 
+geomTransf Linear 50 0.000 0.000 1.000 
+geomTransf Linear 51 0.000 0.000 1.000 
+geomTransf Linear 52 0.000 0.000 1.000 
+puts "element"
+element elasticBeamColumn 1 1 2 2.500E+005 3.600E+003 1.500E+003 8.802E+009 5.208E+009 5.208E+009 1
+element elasticBeamColumn 2 3 4 2.500E+005 3.600E+003 1.500E+003 8.802E+009 5.208E+009 5.208E+009 2
+element elasticBeamColumn 3 5 6 2.500E+005 3.600E+003 1.500E+003 8.802E+009 5.208E+009 5.208E+009 3
+element elasticBeamColumn 4 7 8 2.500E+005 3.600E+003 1.500E+003 8.802E+009 5.208E+009 5.208E+009 4
+element elasticBeamColumn 5 9 10 2.500E+005 3.600E+003 1.500E+003 8.802E+009 5.208E+009 5.208E+009 5
+element elasticBeamColumn 6 11 12 2.500E+005 3.600E+003 1.500E+003 8.802E+009 5.208E+009 5.208E+009 6
+element elasticBeamColumn 7 4 8 1.500E+005 3.600E+003 1.500E+003 2.817E+009 3.125E+009 1.125E+009 7
+element elasticBeamColumn 8 2 4 1.500E+005 3.600E+003 1.500E+003 2.817E+009 3.125E+009 1.125E+009 8
+element elasticBeamColumn 9 2 6 1.500E+005 3.600E+003 1.500E+003 2.817E+009 3.125E+009 1.125E+009 9
+element elasticBeamColumn 10 6 8 1.500E+005 3.600E+003 1.500E+003 2.817E+009 3.125E+009 1.125E+009 10
+element elasticBeamColumn 11 6 10 1.500E+005 3.600E+003 1.500E+003 2.817E+009 3.125E+009 1.125E+009 11
+element elasticBeamColumn 12 10 12 1.500E+005 3.600E+003 1.500E+003 2.817E+009 3.125E+009 1.125E+009 12
+element elasticBeamColumn 13 8 12 1.500E+005 3.600E+003 1.500E+003 2.817E+009 3.125E+009 1.125E+009 13
+element elasticBeamColumn 14 13 1 2.500E+005 3.600E+003 1.500E+003 8.802E+009 5.208E+009 5.208E+009 14
+element elasticBeamColumn 15 14 3 2.500E+005 3.600E+003 1.500E+003 8.802E+009 5.208E+009 5.208E+009 15
+element elasticBeamColumn 16 15 5 2.500E+005 3.600E+003 1.500E+003 8.802E+009 5.208E+009 5.208E+009 16
+element elasticBeamColumn 17 16 7 2.500E+005 3.600E+003 1.500E+003 8.802E+009 5.208E+009 5.208E+009 17
+element elasticBeamColumn 18 17 9 2.500E+005 3.600E+003 1.500E+003 8.802E+009 5.208E+009 5.208E+009 18
+element elasticBeamColumn 19 18 11 2.500E+005 3.600E+003 1.500E+003 8.802E+009 5.208E+009 5.208E+009 19
+element elasticBeamColumn 20 3 7 1.500E+005 3.600E+003 1.500E+003 2.817E+009 3.125E+009 1.125E+009 20
+element elasticBeamColumn 21 1 3 1.500E+005 3.600E+003 1.500E+003 2.817E+009 3.125E+009 1.125E+009 21
+element elasticBeamColumn 22 1 5 1.500E+005 3.600E+003 1.500E+003 2.817E+009 3.125E+009 1.125E+009 22
+element elasticBeamColumn 23 5 7 1.500E+005 3.600E+003 1.500E+003 2.817E+009 3.125E+009 1.125E+009 23
+element elasticBeamColumn 24 5 9 1.500E+005 3.600E+003 1.500E+003 2.817E+009 3.125E+009 1.125E+009 24
+element elasticBeamColumn 25 9 11 1.500E+005 3.600E+003 1.500E+003 2.817E+009 3.125E+009 1.125E+009 25
+element elasticBeamColumn 26 7 11 1.500E+005 3.600E+003 1.500E+003 2.817E+009 3.125E+009 1.125E+009 26
+element elasticBeamColumn 27 19 13 2.500E+005 3.600E+003 1.500E+003 8.802E+009 5.208E+009 5.208E+009 27
+element elasticBeamColumn 28 20 14 2.500E+005 3.600E+003 1.500E+003 8.802E+009 5.208E+009 5.208E+009 28
+element elasticBeamColumn 29 21 15 2.500E+005 3.600E+003 1.500E+003 8.802E+009 5.208E+009 5.208E+009 29
+element elasticBeamColumn 30 22 16 2.500E+005 3.600E+003 1.500E+003 8.802E+009 5.208E+009 5.208E+009 30
+element elasticBeamColumn 31 23 17 2.500E+005 3.600E+003 1.500E+003 8.802E+009 5.208E+009 5.208E+009 31
+element elasticBeamColumn 32 24 18 2.500E+005 3.600E+003 1.500E+003 8.802E+009 5.208E+009 5.208E+009 32
+element elasticBeamColumn 33 14 16 1.500E+005 3.600E+003 1.500E+003 2.817E+009 3.125E+009 1.125E+009 33
+element elasticBeamColumn 34 13 14 1.500E+005 3.600E+003 1.500E+003 2.817E+009 3.125E+009 1.125E+009 34
+element elasticBeamColumn 35 13 15 1.500E+005 3.600E+003 1.500E+003 2.817E+009 3.125E+009 1.125E+009 35
+element elasticBeamColumn 36 15 16 1.500E+005 3.600E+003 1.500E+003 2.817E+009 3.125E+009 1.125E+009 36
+element elasticBeamColumn 37 15 17 1.500E+005 3.600E+003 1.500E+003 2.817E+009 3.125E+009 1.125E+009 37
+element elasticBeamColumn 38 17 18 1.500E+005 3.600E+003 1.500E+003 2.817E+009 3.125E+009 1.125E+009 38
+element elasticBeamColumn 39 16 18 1.500E+005 3.600E+003 1.500E+003 2.817E+009 3.125E+009 1.125E+009 39
+element elasticBeamColumn 40 25 19 2.500E+005 3.600E+003 1.500E+003 8.802E+009 5.208E+009 5.208E+009 40
+element elasticBeamColumn 41 26 20 2.500E+005 3.600E+003 1.500E+003 8.802E+009 5.208E+009 5.208E+009 41
+element elasticBeamColumn 42 27 21 2.500E+005 3.600E+003 1.500E+003 8.802E+009 5.208E+009 5.208E+009 42
+element elasticBeamColumn 43 28 22 2.500E+005 3.600E+003 1.500E+003 8.802E+009 5.208E+009 5.208E+009 43
+element elasticBeamColumn 44 29 23 2.500E+005 3.600E+003 1.500E+003 8.802E+009 5.208E+009 5.208E+009 44
+element elasticBeamColumn 45 30 24 2.500E+005 3.600E+003 1.500E+003 8.802E+009 5.208E+009 5.208E+009 45
+element elasticBeamColumn 46 20 22 1.500E+005 3.600E+003 1.500E+003 2.817E+009 3.125E+009 1.125E+009 46
+element elasticBeamColumn 47 19 20 1.500E+005 3.600E+003 1.500E+003 2.817E+009 3.125E+009 1.125E+009 47
+element elasticBeamColumn 48 19 21 1.500E+005 3.600E+003 1.500E+003 2.817E+009 3.125E+009 1.125E+009 48
+element elasticBeamColumn 49 21 22 1.500E+005 3.600E+003 1.500E+003 2.817E+009 3.125E+009 1.125E+009 49
+element elasticBeamColumn 50 21 23 1.500E+005 3.600E+003 1.500E+003 2.817E+009 3.125E+009 1.125E+009 50
+element elasticBeamColumn 51 23 24 1.500E+005 3.600E+003 1.500E+003 2.817E+009 3.125E+009 1.125E+009 51
+element elasticBeamColumn 52 22 24 1.500E+005 3.600E+003 1.500E+003 2.817E+009 3.125E+009 1.125E+009 52
+puts "shell element"
+puts "SOLID element"
+puts "recorder"
+recorder Node -file node2.out -time -node 2 -dof 1 disp
+recorder Node -file node0.out -time -nodeRange 1 30 -dof 1 2 3 disp
+ 
+set xDamp 0.05;
+set nEigenI 1;
+set nEigenJ 2;
+set lambdaN [eigen [expr $nEigenJ]];
+set lambdaI [lindex $lambdaN [expr $nEigenI-1]];
+set lambdaJ [lindex $lambdaN [expr $nEigenJ-1]];
+set omegaI [expr pow($lambdaI,0.5)]; 
+set omegaJ [expr pow($lambdaJ,0.5)];
+set alphaM [expr $xDamp*(2*$omegaI*$omegaJ)/($omegaI+$omegaJ)]; 
+set betaKcurr [expr 2.*$xDamp/($omegaI+$omegaJ)];   
+rayleigh $alphaM $betaKcurr 0 0  
+  
+set IDloadTag 1001;
+set iGMfile "GM1X.txt";
+set iGMdirection "1"; 
+set iGMfact "1";  
+set dt 0.02;   
+foreach GMdirection $iGMdirection GMfile $iGMfile GMfact $iGMfact { 
+incr IDloadTag; 
+set GMfatt [expr 1*$iGMfact];  
+set AccelSeries "Series -dt $dt -filePath $iGMfile -factor  $GMfatt";
+pattern UniformExcitation  $IDloadTag  $GMdirection -accel  $AccelSeries; 
+}  
+  
+constraints Transformation; 
+numberer Plain;  
+system UmfPack; 
+test EnergyIncr 1.0e-4 200; 
+algorithm Newton 
+integrator Newmark 0.5 0.25 
+analysis Transient
+analyze 2048 0.02
