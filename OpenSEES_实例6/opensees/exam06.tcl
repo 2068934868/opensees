@@ -2,157 +2,179 @@ wipe
 puts "System"
 model basic -ndm 3 -ndf 6
 puts "restraint"
-node 1 -6.750E+003 -4.500E+003 3.000E+003
-node 2 -6.750E+003 0.000E+000 3.000E+003
-node 3 -6.750E+003 4.500E+003 3.000E+003
-node 4 -2.250E+003 -4.500E+003 3.000E+003
-node 5 -2.250E+003 0.000E+000 3.000E+003
-node 6 -2.250E+003 4.500E+003 3.000E+003
-node 7 2.250E+003 -4.500E+003 3.000E+003
-node 8 2.250E+003 0.000E+000 3.000E+003
-node 9 2.250E+003 4.500E+003 3.000E+003
-node 10 6.750E+003 -4.500E+003 3.000E+003
-node 11 6.750E+003 0.000E+000 3.000E+003
-node 12 6.750E+003 4.500E+003 3.000E+003
-node 13 -6.750E+003 -4.500E+003 6.000E+003
-node 14 -6.750E+003 0.000E+000 6.000E+003
-node 15 -6.750E+003 4.500E+003 6.000E+003
-node 16 -2.250E+003 -4.500E+003 6.000E+003
-node 17 -2.250E+003 0.000E+000 6.000E+003
-node 18 -2.250E+003 4.500E+003 6.000E+003
-node 19 2.250E+003 -4.500E+003 6.000E+003
-node 20 2.250E+003 0.000E+000 6.000E+003
-node 21 2.250E+003 4.500E+003 6.000E+003
-node 22 6.750E+003 -4.500E+003 6.000E+003
-node 23 6.750E+003 0.000E+000 6.000E+003
-node 24 6.750E+003 4.500E+003 6.000E+003
-node 25 -6.750E+003 -4.500E+003 9.000E+003
-node 26 -6.750E+003 0.000E+000 9.000E+003
-node 27 -6.750E+003 4.500E+003 9.000E+003
-node 28 -2.250E+003 -4.500E+003 9.000E+003
-node 29 -2.250E+003 0.000E+000 9.000E+003
-node 30 -2.250E+003 4.500E+003 9.000E+003
-node 31 2.250E+003 -4.500E+003 9.000E+003
-node 32 2.250E+003 0.000E+000 9.000E+003
-node 33 2.250E+003 4.500E+003 9.000E+003
-node 34 6.750E+003 -4.500E+003 9.000E+003
-node 35 6.750E+003 0.000E+000 9.000E+003
-node 36 6.750E+003 4.500E+003 9.000E+003
-node 37 -6.750E+003 -4.500E+003 1.200E+004
-node 38 -6.750E+003 0.000E+000 1.200E+004
-node 39 -6.750E+003 4.500E+003 1.200E+004
-node 40 -2.250E+003 -4.500E+003 1.200E+004
-node 41 -2.250E+003 0.000E+000 1.200E+004
-node 42 -2.250E+003 4.500E+003 1.200E+004
-node 43 2.250E+003 -4.500E+003 1.200E+004
-node 44 2.250E+003 0.000E+000 1.200E+004
-node 45 2.250E+003 4.500E+003 1.200E+004
-node 46 6.750E+003 -4.500E+003 1.200E+004
-node 47 6.750E+003 0.000E+000 1.200E+004
-node 48 6.750E+003 4.500E+003 1.200E+004
-node 49 -6.750E+003 -4.500E+003 1.500E+004
-node 50 -6.750E+003 0.000E+000 1.500E+004
-node 51 -6.750E+003 4.500E+003 1.500E+004
-node 52 -2.250E+003 -4.500E+003 1.500E+004
-node 53 -2.250E+003 0.000E+000 1.500E+004
-node 54 -2.250E+003 4.500E+003 1.500E+004
-node 55 2.250E+003 -4.500E+003 1.500E+004
-node 56 2.250E+003 0.000E+000 1.500E+004
-node 57 2.250E+003 4.500E+003 1.500E+004
-node 58 6.750E+003 -4.500E+003 1.500E+004
-node 59 6.750E+003 0.000E+000 1.500E+004
-node 60 6.750E+003 4.500E+003 1.500E+004
-node 61 -6.750E+003 4.500E+003 0.000E+000
-node 62 -2.250E+003 4.500E+003 0.000E+000
-node 63 2.250E+003 4.500E+003 0.000E+000
-node 64 6.750E+003 4.500E+003 0.000E+000
-node 65 -6.750E+003 -4.500E+003 0.000E+000
-node 66 -2.250E+003 -4.500E+003 0.000E+000
-node 67 2.250E+003 -4.500E+003 0.000E+000
-node 68 6.750E+003 -4.500E+003 0.000E+000
-node 69 -6.750E+003 0.000E+000 0.000E+000
-node 70 -2.250E+003 0.000E+000 0.000E+000
-node 71 2.250E+003 0.000E+000 0.000E+000
-node 72 6.750E+003 0.000E+000 0.000E+000
+node 1 0.000E+000 0.000E+000 9.000E+003
+node 2 0.000E+000 0.000E+000 1.200E+004
+node 3 0.000E+000 6.000E+003 9.000E+003
+node 4 0.000E+000 6.000E+003 1.200E+004
+node 5 6.000E+003 0.000E+000 9.000E+003
+node 6 6.000E+003 0.000E+000 1.200E+004
+node 7 6.000E+003 6.000E+003 9.000E+003
+node 8 6.000E+003 6.000E+003 1.200E+004
+node 9 1.200E+004 0.000E+000 9.000E+003
+node 10 1.200E+004 0.000E+000 1.200E+004
+node 11 1.200E+004 6.000E+003 9.000E+003
+node 12 1.200E+004 6.000E+003 1.200E+004
+node 13 1.800E+004 0.000E+000 9.000E+003
+node 14 1.800E+004 0.000E+000 1.200E+004
+node 15 1.800E+004 6.000E+003 9.000E+003
+node 16 1.800E+004 6.000E+003 1.200E+004
+node 17 7.000E+003 0.000E+000 9.500E+003
+node 18 8.000E+003 0.000E+000 1.000E+004
+node 19 9.000E+003 0.000E+000 1.050E+004
+node 20 1.000E+004 0.000E+000 1.100E+004
+node 21 1.100E+004 0.000E+000 1.150E+004
+node 22 7.000E+003 6.000E+003 9.500E+003
+node 23 8.000E+003 6.000E+003 1.000E+004
+node 24 9.000E+003 6.000E+003 1.050E+004
+node 25 1.000E+004 6.000E+003 1.100E+004
+node 26 1.100E+004 6.000E+003 1.150E+004
+node 27 7.000E+003 0.000E+000 6.500E+003
+node 28 8.000E+003 0.000E+000 7.000E+003
+node 29 9.000E+003 0.000E+000 7.500E+003
+node 30 1.000E+004 0.000E+000 8.000E+003
+node 31 1.100E+004 0.000E+000 8.500E+003
+node 32 7.000E+003 6.000E+003 6.500E+003
+node 33 8.000E+003 6.000E+003 7.000E+003
+node 34 9.000E+003 6.000E+003 7.500E+003
+node 35 1.000E+004 6.000E+003 8.000E+003
+node 36 1.100E+004 6.000E+003 8.500E+003
+node 37 0.000E+000 0.000E+000 6.000E+003
+node 38 0.000E+000 6.000E+003 6.000E+003
+node 39 6.000E+003 0.000E+000 6.000E+003
+node 40 6.000E+003 6.000E+003 6.000E+003
+node 41 1.200E+004 0.000E+000 6.000E+003
+node 42 1.200E+004 6.000E+003 6.000E+003
+node 43 1.800E+004 0.000E+000 6.000E+003
+node 44 1.800E+004 6.000E+003 6.000E+003
+node 45 7.000E+003 0.000E+000 3.500E+003
+node 46 8.000E+003 0.000E+000 4.000E+003
+node 47 9.000E+003 0.000E+000 4.500E+003
+node 48 1.000E+004 0.000E+000 5.000E+003
+node 49 1.100E+004 0.000E+000 5.500E+003
+node 50 7.000E+003 6.000E+003 3.500E+003
+node 51 8.000E+003 6.000E+003 4.000E+003
+node 52 9.000E+003 6.000E+003 4.500E+003
+node 53 1.000E+004 6.000E+003 5.000E+003
+node 54 1.100E+004 6.000E+003 5.500E+003
+node 55 0.000E+000 0.000E+000 3.000E+003
+node 56 0.000E+000 6.000E+003 3.000E+003
+node 57 6.000E+003 0.000E+000 3.000E+003
+node 58 6.000E+003 6.000E+003 3.000E+003
+node 59 1.200E+004 0.000E+000 3.000E+003
+node 60 1.200E+004 6.000E+003 3.000E+003
+node 61 1.800E+004 0.000E+000 3.000E+003
+node 62 1.800E+004 6.000E+003 3.000E+003
+node 63 7.000E+003 0.000E+000 5.000E+002
+node 64 8.000E+003 0.000E+000 1.000E+003
+node 65 9.000E+003 0.000E+000 1.500E+003
+node 66 1.000E+004 0.000E+000 2.000E+003
+node 67 1.100E+004 0.000E+000 2.500E+003
+node 68 7.000E+003 6.000E+003 5.000E+002
+node 69 8.000E+003 6.000E+003 1.000E+003
+node 70 9.000E+003 6.000E+003 1.500E+003
+node 71 1.000E+004 6.000E+003 2.000E+003
+node 72 1.100E+004 6.000E+003 2.500E+003
+node 73 0.000E+000 0.000E+000 0.000E+000
+node 74 0.000E+000 6.000E+003 0.000E+000
+node 75 6.000E+003 0.000E+000 0.000E+000
+node 76 6.000E+003 6.000E+003 0.000E+000
+node 77 1.200E+004 0.000E+000 0.000E+000
+node 78 1.200E+004 6.000E+003 0.000E+000
+node 79 1.800E+004 0.000E+000 0.000E+000
+node 80 1.800E+004 6.000E+003 0.000E+000
 puts "rigidDiaphragm"
 puts "mass"
 puts "node"
-fix 61 1 1 1 1 1 1;
-fix 62 1 1 1 1 1 1;
-fix 63 1 1 1 1 1 1;
-fix 64 1 1 1 1 1 1;
-fix 65 1 1 1 1 1 1;
-fix 66 1 1 1 1 1 1;
-fix 67 1 1 1 1 1 1;
-fix 68 1 1 1 1 1 1;
-fix 69 1 1 1 1 1 1;
-fix 70 1 1 1 1 1 1;
-fix 71 1 1 1 1 1 1;
-fix 72 1 1 1 1 1 1;
+fix 73 1 1 1 1 1 1;
+fix 74 1 1 1 1 1 1;
+fix 75 1 1 1 1 1 1;
+fix 76 1 1 1 1 1 1;
+fix 77 1 1 1 1 1 1;
+fix 78 1 1 1 1 1 1;
+fix 79 1 1 1 1 1 1;
+fix 80 1 1 1 1 1 1;
 puts "Equal DOF"
 puts "material"
-uniaxialMaterial Elastic 1 2.482E+004
-uniaxialMaterial Elastic 2 1.999E+005
-uniaxialMaterial Elastic 3 1.999E+005
+uniaxialMaterial Elastic 1 1.999E+005
+uniaxialMaterial Steel01 2 295 206000 0.05
 
-##C400*400 
-section Fiber 2 -GJ 4.507E+013 {
-fiber -1.600E+002 -1.600E+002 6.400E+003 1
-fiber -8.000E+001 -1.600E+002 6.400E+003 1
-fiber 0.000E+000 -1.600E+002 6.400E+003 1
-fiber 8.000E+001 -1.600E+002 6.400E+003 1
-fiber 1.600E+002 -1.600E+002 6.400E+003 1
-fiber -1.600E+002 -8.000E+001 6.400E+003 1
-fiber -8.000E+001 -8.000E+001 6.400E+003 1
-fiber 0.000E+000 -8.000E+001 6.400E+003 1
-fiber 8.000E+001 -8.000E+001 6.400E+003 1
-fiber 1.600E+002 -8.000E+001 6.400E+003 1
-fiber -1.600E+002 0.000E+000 6.400E+003 1
-fiber -8.000E+001 0.000E+000 6.400E+003 1
-fiber 0.000E+000 0.000E+000 6.400E+003 1
-fiber 8.000E+001 0.000E+000 6.400E+003 1
-fiber 1.600E+002 0.000E+000 6.400E+003 1
-fiber -1.600E+002 8.000E+001 6.400E+003 1
-fiber -8.000E+001 8.000E+001 6.400E+003 1
-fiber 0.000E+000 8.000E+001 6.400E+003 1
-fiber 8.000E+001 8.000E+001 6.400E+003 1
-fiber 1.600E+002 8.000E+001 6.400E+003 1
-fiber -1.600E+002 1.600E+002 6.400E+003 1
-fiber -8.000E+001 1.600E+002 6.400E+003 1
-fiber 0.000E+000 1.600E+002 6.400E+003 1
-fiber 8.000E+001 1.600E+002 6.400E+003 1
-fiber 1.600E+002 1.600E+002 6.400E+003 1
-fiber -1.650E+002 -1.650E+002 2.000E+002 1
-fiber -8.250E+001 -1.650E+002 2.000E+002 1
-fiber 0.000E+000 -1.650E+002 2.000E+002 1
-fiber 8.250E+001 -1.650E+002 2.000E+002 1
-fiber 1.650E+002 -1.650E+002 2.000E+002 1
-fiber -1.650E+002 1.650E+002 2.000E+002 1
-fiber -8.250E+001 1.650E+002 2.000E+002 1
-fiber 0.000E+000 1.650E+002 2.000E+002 1
-fiber 8.250E+001 1.650E+002 2.000E+002 1
-fiber 1.650E+002 1.650E+002 2.000E+002 1
-fiber -1.650E+002 -1.100E+002 2.000E+002 1
-fiber -1.650E+002 -5.500E+001 2.000E+002 1
-fiber -1.650E+002 0.000E+000 2.000E+002 1
-fiber -1.650E+002 5.500E+001 2.000E+002 1
-fiber -1.650E+002 1.100E+002 2.000E+002 1
-fiber 1.650E+002 -1.100E+002 2.000E+002 1
-fiber 1.650E+002 -5.500E+001 2.000E+002 1
-fiber 1.650E+002 0.000E+000 2.000E+002 1
-fiber 1.650E+002 5.500E+001 2.000E+002 1
-fiber 1.650E+002 1.100E+002 2.000E+002 1
+
+uniaxialMaterial Elastic 201 6.729E+008
+uniaxialMaterial Elastic 301 1.346E+009
+uniaxialMaterial Elastic 401 9.892E+011
+uniaxialMaterial Elastic 202 2.307E+008
+uniaxialMaterial Elastic 302 1.346E+009
+uniaxialMaterial Elastic 402 6.727E+011
+uniaxialMaterial Elastic 203 6.895E+007
+uniaxialMaterial Elastic 303 1.379E+008
+uniaxialMaterial Elastic 403 3.309E+010
+##DHC300X300X35X35 
+section Fiber 1 -GJ 9.892E+011 {
+fiber -1.200E+002 -1.325E+002 2.100E+003 1
+fiber -6.000E+001 -1.325E+002 2.100E+003 1
+fiber 0.000E+000 -1.325E+002 2.100E+003 1
+fiber 6.000E+001 -1.325E+002 2.100E+003 1
+fiber 1.200E+002 -1.325E+002 2.100E+003 1
+fiber -1.200E+002 1.325E+002 2.100E+003 1
+fiber -6.000E+001 1.325E+002 2.100E+003 1
+fiber 0.000E+000 1.325E+002 2.100E+003 1
+fiber 6.000E+001 1.325E+002 2.100E+003 1
+fiber 1.200E+002 1.325E+002 2.100E+003 1
+fiber 0.000E+000 -9.200E+001 1.610E+003 1
+fiber 0.000E+000 -4.600E+001 1.610E+003 1
+fiber 0.000E+000 0.000E+000 1.610E+003 1
+fiber 0.000E+000 4.600E+001 1.610E+003 1
+fiber 0.000E+000 9.200E+001 1.610E+003 1
 }
+##DHB300X300X35X12 
+section Fiber 2 -GJ 6.727E+011 {
+fiber -1.200E+002 -1.325E+002 2.100E+003 1
+fiber -6.000E+001 -1.325E+002 2.100E+003 1
+fiber 0.000E+000 -1.325E+002 2.100E+003 1
+fiber 6.000E+001 -1.325E+002 2.100E+003 1
+fiber 1.200E+002 -1.325E+002 2.100E+003 1
+fiber -1.200E+002 1.325E+002 2.100E+003 1
+fiber -6.000E+001 1.325E+002 2.100E+003 1
+fiber 0.000E+000 1.325E+002 2.100E+003 1
+fiber 6.000E+001 1.325E+002 2.100E+003 1
+fiber 1.200E+002 1.325E+002 2.100E+003 1
+fiber 0.000E+000 -9.200E+001 5.520E+002 1
+fiber 0.000E+000 -4.600E+001 5.520E+002 1
+fiber 0.000E+000 0.000E+000 5.520E+002 1
+fiber 0.000E+000 4.600E+001 5.520E+002 1
+fiber 0.000E+000 9.200E+001 5.520E+002 1
+}
+##DH400X400X20X20 
+section Fiber 3 -GJ 3.309E+010 {
+fiber -1.600E+002 -1.900E+002 1.600E+003 2
+fiber -8.000E+001 -1.900E+002 1.600E+003 2
+fiber 0.000E+000 -1.900E+002 1.600E+003 2
+fiber 8.000E+001 -1.900E+002 1.600E+003 2
+fiber 1.600E+002 -1.900E+002 1.600E+003 2
+fiber -1.600E+002 1.900E+002 1.600E+003 2
+fiber -8.000E+001 1.900E+002 1.600E+003 2
+fiber 0.000E+000 1.900E+002 1.600E+003 2
+fiber 8.000E+001 1.900E+002 1.600E+003 2
+fiber 1.600E+002 1.900E+002 1.600E+003 2
+fiber 0.000E+000 -1.440E+002 1.440E+003 2
+fiber 0.000E+000 -7.200E+001 1.440E+003 2
+fiber 0.000E+000 0.000E+000 1.440E+003 2
+fiber 0.000E+000 7.200E+001 1.440E+003 2
+fiber 0.000E+000 1.440E+002 1.440E+003 2
+}
+section Aggregator 1001 201 Vy 301 Vz 401 T -section 1
+section Aggregator 1002 202 Vy 302 Vz 402 T -section 2
+section Aggregator 1003 203 Vy 303 Vz 403 T -section 3
 
 puts "transformation"
-geomTransf Linear 1 0.000 0.000 1.000 
-geomTransf Linear 2 0.000 0.000 1.000 
-geomTransf Linear 3 0.000 0.000 1.000 
-geomTransf Linear 4 0.000 0.000 1.000 
-geomTransf Linear 5 0.000 0.000 1.000 
-geomTransf Linear 6 0.000 0.000 1.000 
-geomTransf Linear 7 0.000 0.000 1.000 
-geomTransf Linear 8 0.000 0.000 1.000 
+geomTransf Linear 1 1.000 0.000 0.000 
+geomTransf Linear 2 1.000 0.000 0.000 
+geomTransf Linear 3 1.000 0.000 0.000 
+geomTransf Linear 4 1.000 0.000 0.000 
+geomTransf Linear 5 1.000 0.000 0.000 
+geomTransf Linear 6 1.000 0.000 0.000 
+geomTransf Linear 7 1.000 0.000 0.000 
+geomTransf Linear 8 1.000 0.000 0.000 
 geomTransf Linear 9 0.000 0.000 1.000 
 geomTransf Linear 10 0.000 0.000 1.000 
 geomTransf Linear 11 0.000 0.000 1.000 
@@ -163,26 +185,26 @@ geomTransf Linear 15 0.000 0.000 1.000
 geomTransf Linear 16 0.000 0.000 1.000 
 geomTransf Linear 17 0.000 0.000 1.000 
 geomTransf Linear 18 0.000 0.000 1.000 
-geomTransf Linear 19 0.000 0.000 1.000 
-geomTransf Linear 20 0.000 0.000 1.000 
-geomTransf Linear 21 0.000 0.000 1.000 
-geomTransf Linear 22 0.000 0.000 1.000 
-geomTransf Linear 23 0.000 0.000 1.000 
-geomTransf Linear 24 0.000 0.000 1.000 
-geomTransf Linear 25 0.000 0.000 1.000 
-geomTransf Linear 26 0.000 0.000 1.000 
-geomTransf Linear 27 0.000 0.000 1.000 
-geomTransf Linear 28 0.000 0.000 1.000 
-geomTransf Linear 29 0.000 0.000 1.000 
-geomTransf Linear 30 0.000 0.000 1.000 
-geomTransf Linear 31 0.000 0.000 1.000 
-geomTransf Linear 32 0.000 0.000 1.000 
-geomTransf Linear 33 0.000 0.000 1.000 
-geomTransf Linear 34 0.000 0.000 1.000 
-geomTransf Linear 35 0.000 0.000 1.000 
-geomTransf Linear 36 0.000 0.000 1.000 
-geomTransf Linear 37 0.000 0.000 1.000 
-geomTransf Linear 38 0.000 0.000 1.000 
+geomTransf Linear 19 -0.447 0.000 0.894 
+geomTransf Linear 20 -0.447 0.000 0.894 
+geomTransf Linear 21 -0.447 0.000 0.894 
+geomTransf Linear 22 -0.447 0.000 0.894 
+geomTransf Linear 23 -0.447 0.000 0.894 
+geomTransf Linear 24 -0.447 0.000 0.894 
+geomTransf Linear 25 -0.447 0.000 0.894 
+geomTransf Linear 26 -0.447 0.000 0.894 
+geomTransf Linear 27 -0.447 0.000 0.894 
+geomTransf Linear 28 -0.447 0.000 0.894 
+geomTransf Linear 29 -0.447 0.000 0.894 
+geomTransf Linear 30 -0.447 0.000 0.894 
+geomTransf Linear 31 1.000 0.000 0.000 
+geomTransf Linear 32 1.000 0.000 0.000 
+geomTransf Linear 33 1.000 0.000 0.000 
+geomTransf Linear 34 1.000 0.000 0.000 
+geomTransf Linear 35 1.000 0.000 0.000 
+geomTransf Linear 36 1.000 0.000 0.000 
+geomTransf Linear 37 1.000 0.000 0.000 
+geomTransf Linear 38 1.000 0.000 0.000 
 geomTransf Linear 39 0.000 0.000 1.000 
 geomTransf Linear 40 0.000 0.000 1.000 
 geomTransf Linear 41 0.000 0.000 1.000 
@@ -193,26 +215,26 @@ geomTransf Linear 45 0.000 0.000 1.000
 geomTransf Linear 46 0.000 0.000 1.000 
 geomTransf Linear 47 0.000 0.000 1.000 
 geomTransf Linear 48 0.000 0.000 1.000 
-geomTransf Linear 49 0.000 0.000 1.000 
-geomTransf Linear 50 0.000 0.000 1.000 
-geomTransf Linear 51 0.000 0.000 1.000 
-geomTransf Linear 52 0.000 0.000 1.000 
-geomTransf Linear 53 0.000 0.000 1.000 
-geomTransf Linear 54 0.000 0.000 1.000 
-geomTransf Linear 55 0.000 0.000 1.000 
-geomTransf Linear 56 0.000 0.000 1.000 
-geomTransf Linear 57 0.000 0.000 1.000 
-geomTransf Linear 58 0.000 0.000 1.000 
-geomTransf Linear 59 0.000 0.000 1.000 
-geomTransf Linear 60 0.000 0.000 1.000 
-geomTransf Linear 61 0.000 0.000 1.000 
-geomTransf Linear 62 0.000 0.000 1.000 
-geomTransf Linear 63 0.000 0.000 1.000 
-geomTransf Linear 64 0.000 0.000 1.000 
-geomTransf Linear 65 0.000 0.000 1.000 
-geomTransf Linear 66 0.000 0.000 1.000 
-geomTransf Linear 67 0.000 0.000 1.000 
-geomTransf Linear 68 0.000 0.000 1.000 
+geomTransf Linear 49 -0.447 0.000 0.894 
+geomTransf Linear 50 -0.447 0.000 0.894 
+geomTransf Linear 51 -0.447 0.000 0.894 
+geomTransf Linear 52 -0.447 0.000 0.894 
+geomTransf Linear 53 -0.447 0.000 0.894 
+geomTransf Linear 54 -0.447 0.000 0.894 
+geomTransf Linear 55 -0.447 0.000 0.894 
+geomTransf Linear 56 -0.447 0.000 0.894 
+geomTransf Linear 57 -0.447 0.000 0.894 
+geomTransf Linear 58 -0.447 0.000 0.894 
+geomTransf Linear 59 -0.447 0.000 0.894 
+geomTransf Linear 60 -0.447 0.000 0.894 
+geomTransf Linear 61 1.000 0.000 0.000 
+geomTransf Linear 62 1.000 0.000 0.000 
+geomTransf Linear 63 1.000 0.000 0.000 
+geomTransf Linear 64 1.000 0.000 0.000 
+geomTransf Linear 65 1.000 0.000 0.000 
+geomTransf Linear 66 1.000 0.000 0.000 
+geomTransf Linear 67 1.000 0.000 0.000 
+geomTransf Linear 68 1.000 0.000 0.000 
 geomTransf Linear 69 0.000 0.000 1.000 
 geomTransf Linear 70 0.000 0.000 1.000 
 geomTransf Linear 71 0.000 0.000 1.000 
@@ -223,198 +245,261 @@ geomTransf Linear 75 0.000 0.000 1.000
 geomTransf Linear 76 0.000 0.000 1.000 
 geomTransf Linear 77 0.000 0.000 1.000 
 geomTransf Linear 78 0.000 0.000 1.000 
-geomTransf Linear 79 0.000 0.000 1.000 
-geomTransf Linear 80 0.000 0.000 1.000 
-geomTransf Linear 81 0.000 0.000 1.000 
-geomTransf Linear 82 0.000 0.000 1.000 
-geomTransf Linear 83 0.000 0.000 1.000 
-geomTransf Linear 84 0.000 0.000 1.000 
-geomTransf Linear 85 0.000 0.000 1.000 
+geomTransf Linear 79 -0.447 0.000 0.894 
+geomTransf Linear 80 -0.447 0.000 0.894 
+geomTransf Linear 81 -0.447 0.000 0.894 
+geomTransf Linear 82 -0.447 0.000 0.894 
+geomTransf Linear 83 -0.447 0.000 0.894 
+geomTransf Linear 84 -0.447 0.000 0.894 
+geomTransf Linear 85 -0.447 0.000 0.894 
+geomTransf Linear 86 -0.447 0.000 0.894 
+geomTransf Linear 87 -0.447 0.000 0.894 
+geomTransf Linear 88 -0.447 0.000 0.894 
+geomTransf Linear 89 -0.447 0.000 0.894 
+geomTransf Linear 90 -0.447 0.000 0.894 
+geomTransf Linear 91 1.000 0.000 0.000 
+geomTransf Linear 92 1.000 0.000 0.000 
+geomTransf Linear 93 1.000 0.000 0.000 
+geomTransf Linear 94 1.000 0.000 0.000 
+geomTransf Linear 95 1.000 0.000 0.000 
+geomTransf Linear 96 1.000 0.000 0.000 
+geomTransf Linear 97 1.000 0.000 0.000 
+geomTransf Linear 98 1.000 0.000 0.000 
+geomTransf Linear 99 0.000 0.000 1.000 
+geomTransf Linear 100 0.000 0.000 1.000 
+geomTransf Linear 101 0.000 0.000 1.000 
+geomTransf Linear 102 0.000 0.000 1.000 
+geomTransf Linear 103 0.000 0.000 1.000 
+geomTransf Linear 104 0.000 0.000 1.000 
+geomTransf Linear 105 0.000 0.000 1.000 
+geomTransf Linear 106 0.000 0.000 1.000 
+geomTransf Linear 107 0.000 0.000 1.000 
+geomTransf Linear 108 0.000 0.000 1.000 
+geomTransf Linear 109 -0.447 0.000 0.894 
+geomTransf Linear 110 -0.447 0.000 0.894 
+geomTransf Linear 111 -0.447 0.000 0.894 
+geomTransf Linear 112 -0.447 0.000 0.894 
+geomTransf Linear 113 -0.447 0.000 0.894 
+geomTransf Linear 114 -0.447 0.000 0.894 
+geomTransf Linear 115 -0.447 0.000 0.894 
+geomTransf Linear 116 -0.447 0.000 0.894 
+geomTransf Linear 117 -0.447 0.000 0.894 
+geomTransf Linear 118 -0.447 0.000 0.894 
+geomTransf Linear 119 -0.447 0.000 0.894 
+geomTransf Linear 120 -0.447 0.000 0.894
+
 puts "element"
-element elasticBeamColumn 1 1 2 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 1
-element elasticBeamColumn 2 2 3 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 2
-element elasticBeamColumn 3 4 5 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 3
-element elasticBeamColumn 4 5 6 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 4
-element elasticBeamColumn 5 7 8 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 5
-element elasticBeamColumn 6 8 9 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 6
-element elasticBeamColumn 7 10 11 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 7
-element elasticBeamColumn 8 11 12 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 8
-element elasticBeamColumn 9 1 4 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 9
-element elasticBeamColumn 10 4 7 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 10
-element elasticBeamColumn 11 7 10 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 11
-element elasticBeamColumn 12 2 5 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 12
-element elasticBeamColumn 13 5 8 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 13
-element elasticBeamColumn 14 8 11 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 14
-element elasticBeamColumn 15 3 6 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 15
-element elasticBeamColumn 16 6 9 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 16
-element elasticBeamColumn 17 9 12 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 17
-element elasticBeamColumn 18 13 14 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 18
-element elasticBeamColumn 19 14 15 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 19
-element elasticBeamColumn 20 16 17 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 20
-element elasticBeamColumn 21 17 18 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 21
-element elasticBeamColumn 22 19 20 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 22
-element elasticBeamColumn 23 20 21 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 23
-element elasticBeamColumn 24 22 23 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 24
-element elasticBeamColumn 25 23 24 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 25
-element elasticBeamColumn 26 13 16 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 26
-element elasticBeamColumn 27 16 19 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 27
-element elasticBeamColumn 28 19 22 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 28
-element elasticBeamColumn 29 14 17 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 29
-element elasticBeamColumn 30 17 20 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 30
-element elasticBeamColumn 31 20 23 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 31
-element elasticBeamColumn 32 15 18 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 32
-element elasticBeamColumn 33 18 21 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 33
-element elasticBeamColumn 34 21 24 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 34
-element elasticBeamColumn 35 25 26 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 35
-element elasticBeamColumn 36 26 27 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 36
-element elasticBeamColumn 37 28 29 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 37
-element elasticBeamColumn 38 29 30 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 38
-element elasticBeamColumn 39 31 32 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 39
-element elasticBeamColumn 40 32 33 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 40
-element elasticBeamColumn 41 34 35 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 41
-element elasticBeamColumn 42 35 36 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 42
-element elasticBeamColumn 43 25 28 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 43
-element elasticBeamColumn 44 28 31 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 44
-element elasticBeamColumn 45 31 34 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 45
-element elasticBeamColumn 46 26 29 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 46
-element elasticBeamColumn 47 29 32 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 47
-element elasticBeamColumn 48 32 35 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 48
-element elasticBeamColumn 49 27 30 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 49
-element elasticBeamColumn 50 30 33 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 50
-element elasticBeamColumn 51 33 36 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 51
-element elasticBeamColumn 52 37 38 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 52
-element elasticBeamColumn 53 38 39 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 53
-element elasticBeamColumn 54 40 41 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 54
-element elasticBeamColumn 55 41 42 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 55
-element elasticBeamColumn 56 43 44 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 56
-element elasticBeamColumn 57 44 45 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 57
-element elasticBeamColumn 58 46 47 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 58
-element elasticBeamColumn 59 47 48 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 59
-element elasticBeamColumn 60 37 40 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 60
-element elasticBeamColumn 61 40 43 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 61
-element elasticBeamColumn 62 43 46 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 62
-element elasticBeamColumn 63 38 41 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 63
-element elasticBeamColumn 64 41 44 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 64
-element elasticBeamColumn 65 44 47 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 65
-element elasticBeamColumn 66 39 42 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 66
-element elasticBeamColumn 67 42 45 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 67
-element elasticBeamColumn 68 45 48 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 68
-element elasticBeamColumn 69 49 50 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 69
-element elasticBeamColumn 70 50 51 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 70
-element elasticBeamColumn 71 52 53 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 71
-element elasticBeamColumn 72 53 54 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 72
-element elasticBeamColumn 73 55 56 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 73
-element elasticBeamColumn 74 56 57 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 74
-element elasticBeamColumn 75 58 59 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 75
-element elasticBeamColumn 76 59 60 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 76
-element elasticBeamColumn 77 49 52 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 77
-element elasticBeamColumn 78 52 55 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 78
-element elasticBeamColumn 79 55 58 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 79
-element elasticBeamColumn 80 50 53 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 80
-element elasticBeamColumn 81 53 56 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 81
-element elasticBeamColumn 82 56 59 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 82
-element elasticBeamColumn 83 51 54 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 83
-element elasticBeamColumn 84 54 57 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 84
-element elasticBeamColumn 85 57 60 1.200E+005 3.000E+004 1.250E+004 1.944E+009 1.600E+009 9.000E+008 85
-element corotTrussSection 86 61 3 2
-element corotTrussSection 87 3 15 2
-element corotTrussSection 88 15 27 2
-element corotTrussSection 89 27 39 2
-element corotTrussSection 90 39 51 2
-element corotTrussSection 91 62 6 2
-element corotTrussSection 92 6 18 2
-element corotTrussSection 93 18 30 2
-element corotTrussSection 94 30 42 2
-element corotTrussSection 95 42 54 2
-element corotTrussSection 96 63 9 2
-element corotTrussSection 97 9 21 2
-element corotTrussSection 98 21 33 2
-element corotTrussSection 99 33 45 2
-element corotTrussSection 100 45 57 2
-element corotTrussSection 101 64 12 2
-element corotTrussSection 102 12 24 2
-element corotTrussSection 103 24 36 2
-element corotTrussSection 104 36 48 2
-element corotTrussSection 105 48 60 2
-element corotTrussSection 106 65 1 2
-element corotTrussSection 107 1 13 2
-element corotTrussSection 108 13 25 2
-element corotTrussSection 109 25 37 2
-element corotTrussSection 110 37 49 2
-element corotTrussSection 111 66 4 2
-element corotTrussSection 112 4 16 2
-element corotTrussSection 113 16 28 2
-element corotTrussSection 114 28 40 2
-element corotTrussSection 115 40 52 2
-element corotTrussSection 116 67 7 2
-element corotTrussSection 117 7 19 2
-element corotTrussSection 118 19 31 2
-element corotTrussSection 119 31 43 2
-element corotTrussSection 120 43 55 2
-element corotTrussSection 121 68 10 2
-element corotTrussSection 122 10 22 2
-element corotTrussSection 123 22 34 2
-element corotTrussSection 124 34 46 2
-element corotTrussSection 125 46 58 2
-element corotTrussSection 126 69 2 2
-element corotTrussSection 127 2 14 2
-element corotTrussSection 128 14 26 2
-element corotTrussSection 129 26 38 2
-element corotTrussSection 130 38 50 2
-element corotTrussSection 131 70 5 2
-element corotTrussSection 132 5 17 2
-element corotTrussSection 133 17 29 2
-element corotTrussSection 134 29 41 2
-element corotTrussSection 135 41 53 2
-element corotTrussSection 136 71 8 2
-element corotTrussSection 137 8 20 2
-element corotTrussSection 138 20 32 2
-element corotTrussSection 139 32 44 2
-element corotTrussSection 140 44 56 2
-element corotTrussSection 141 72 11 2
-element corotTrussSection 142 11 23 2
-element corotTrussSection 143 23 35 2
-element corotTrussSection 144 35 47 2
-element corotTrussSection 145 47 59 2
+element dispBeamColumn 1 1 2 3 1001 1
+element dispBeamColumn 2 3 4 3 1001 2
+element dispBeamColumn 3 5 6 3 1001 3
+element dispBeamColumn 4 7 8 3 1001 4
+element dispBeamColumn 5 9 10 3 1001 5
+element dispBeamColumn 6 11 12 3 1001 6
+element dispBeamColumn 7 13 14 3 1001 7
+element dispBeamColumn 8 15 16 3 1001 8
+element dispBeamColumn 9 2 4 3 1002 9
+element dispBeamColumn 10 6 8 3 1002 10
+element dispBeamColumn 11 10 12 3 1002 11
+element dispBeamColumn 12 14 16 3 1002 12
+element dispBeamColumn 13 2 6 3 1002 13
+element dispBeamColumn 14 6 10 3 1002 14
+element dispBeamColumn 15 10 14 3 1002 15
+element dispBeamColumn 16 4 8 3 1002 16
+element dispBeamColumn 17 8 12 3 1002 17
+element dispBeamColumn 18 12 16 3 1002 18
+element dispBeamColumn 19 5 17 3 1003 19
+element dispBeamColumn 20 17 18 3 1003 20
+element dispBeamColumn 21 18 19 3 1003 21
+element dispBeamColumn 22 19 20 3 1003 22
+element dispBeamColumn 23 20 21 3 1003 23
+element dispBeamColumn 24 21 10 3 1003 24
+element dispBeamColumn 25 7 22 3 1003 25
+element dispBeamColumn 26 22 23 3 1003 26
+element dispBeamColumn 27 23 24 3 1003 27
+element dispBeamColumn 28 24 25 3 1003 28
+element dispBeamColumn 29 25 26 3 1003 29
+element dispBeamColumn 30 26 12 3 1003 30
+element dispBeamColumn 31 37 1 3 1001 31
+element dispBeamColumn 32 38 3 3 1001 32
+element dispBeamColumn 33 39 5 3 1001 33
+element dispBeamColumn 34 40 7 3 1001 34
+element dispBeamColumn 35 41 9 3 1001 35
+element dispBeamColumn 36 42 11 3 1001 36
+element dispBeamColumn 37 43 13 3 1001 37
+element dispBeamColumn 38 44 15 3 1001 38
+element dispBeamColumn 39 1 3 3 1002 39
+element dispBeamColumn 40 5 7 3 1002 40
+element dispBeamColumn 41 9 11 3 1002 41
+element dispBeamColumn 42 13 15 3 1002 42
+element dispBeamColumn 43 1 5 3 1002 43
+element dispBeamColumn 44 5 9 3 1002 44
+element dispBeamColumn 45 9 13 3 1002 45
+element dispBeamColumn 46 3 7 3 1002 46
+element dispBeamColumn 47 7 11 3 1002 47
+element dispBeamColumn 48 11 15 3 1002 48
+element dispBeamColumn 49 39 27 3 1003 49
+element dispBeamColumn 50 27 28 3 1003 50
+element dispBeamColumn 51 28 29 3 1003 51
+element dispBeamColumn 52 29 30 3 1003 52
+element dispBeamColumn 53 30 31 3 1003 53
+element dispBeamColumn 54 31 9 3 1003 54
+element dispBeamColumn 55 40 32 3 1003 55
+element dispBeamColumn 56 32 33 3 1003 56
+element dispBeamColumn 57 33 34 3 1003 57
+element dispBeamColumn 58 34 35 3 1003 58
+element dispBeamColumn 59 35 36 3 1003 59
+element dispBeamColumn 60 36 11 3 1003 60
+element dispBeamColumn 61 55 37 3 1001 61
+element dispBeamColumn 62 56 38 3 1001 62
+element dispBeamColumn 63 57 39 3 1001 63
+element dispBeamColumn 64 58 40 3 1001 64
+element dispBeamColumn 65 59 41 3 1001 65
+element dispBeamColumn 66 60 42 3 1001 66
+element dispBeamColumn 67 61 43 3 1001 67
+element dispBeamColumn 68 62 44 3 1001 68
+element dispBeamColumn 69 37 38 3 1002 69
+element dispBeamColumn 70 39 40 3 1002 70
+element dispBeamColumn 71 41 42 3 1002 71
+element dispBeamColumn 72 43 44 3 1002 72
+element dispBeamColumn 73 37 39 3 1002 73
+element dispBeamColumn 74 39 41 3 1002 74
+element dispBeamColumn 75 41 43 3 1002 75
+element dispBeamColumn 76 38 40 3 1002 76
+element dispBeamColumn 77 40 42 3 1002 77
+element dispBeamColumn 78 42 44 3 1002 78
+element dispBeamColumn 79 57 45 3 1003 79
+element dispBeamColumn 80 45 46 3 1003 80
+element dispBeamColumn 81 46 47 3 1003 81
+element dispBeamColumn 82 47 48 3 1003 82
+element dispBeamColumn 83 48 49 3 1003 83
+element dispBeamColumn 84 49 41 3 1003 84
+element dispBeamColumn 85 58 50 3 1003 85
+element dispBeamColumn 86 50 51 3 1003 86
+element dispBeamColumn 87 51 52 3 1003 87
+element dispBeamColumn 88 52 53 3 1003 88
+element dispBeamColumn 89 53 54 3 1003 89
+element dispBeamColumn 90 54 42 3 1003 90
+element dispBeamColumn 91 73 55 3 1001 91
+element dispBeamColumn 92 74 56 3 1001 92
+element dispBeamColumn 93 75 57 3 1001 93
+element dispBeamColumn 94 76 58 3 1001 94
+element dispBeamColumn 95 77 59 3 1001 95
+element dispBeamColumn 96 78 60 3 1001 96
+element dispBeamColumn 97 79 61 3 1001 97
+element dispBeamColumn 98 80 62 3 1001 98
+element dispBeamColumn 99 55 56 3 1002 99
+element dispBeamColumn 100 57 58 3 1002 100
+element dispBeamColumn 101 59 60 3 1002 101
+element dispBeamColumn 102 61 62 3 1002 102
+element dispBeamColumn 103 55 57 3 1002 103
+element dispBeamColumn 104 57 59 3 1002 104
+element dispBeamColumn 105 59 61 3 1002 105
+element dispBeamColumn 106 56 58 3 1002 106
+element dispBeamColumn 107 58 60 3 1002 107
+element dispBeamColumn 108 60 62 3 1002 108
+element dispBeamColumn 109 75 63 3 1003 109
+element dispBeamColumn 110 63 64 3 1003 110
+element dispBeamColumn 111 64 65 3 1003 111
+element dispBeamColumn 112 65 66 3 1003 112
+element dispBeamColumn 113 66 67 3 1003 113
+element dispBeamColumn 114 67 59 3 1003 114
+element dispBeamColumn 115 76 68 3 1003 115
+element dispBeamColumn 116 68 69 3 1003 116
+element dispBeamColumn 117 69 70 3 1003 117
+element dispBeamColumn 118 70 71 3 1003 118
+element dispBeamColumn 119 71 72 3 1003 119
+element dispBeamColumn 120 72 60 3 1003 120
 puts "shell element"
 puts "SOLID element"
 puts "recorder"
-recorder Node -file node0.out -time -nodeRange 1 36 -dof 1 2 3 disp
-recorder Node -file node60.out -time -node 60 -dof 1 2 3 disp
- 
-set xDamp 0.05;
-set nEigenI 1;
-set nEigenJ 2;
-set lambdaN [eigen [expr $nEigenJ]];
-set lambdaI [lindex $lambdaN [expr $nEigenI-1]];
-set lambdaJ [lindex $lambdaN [expr $nEigenJ-1]];
-set omegaI [expr pow($lambdaI,0.5)]; 
-set omegaJ [expr pow($lambdaJ,0.5)];
-set alphaM [expr $xDamp*(2*$omegaI*$omegaJ)/($omegaI+$omegaJ)]; 
-set betaKcurr [expr 2.*$xDamp/($omegaI+$omegaJ)];   
-rayleigh $alphaM $betaKcurr 0 0  
-  
-set IDloadTag 1001;
-set iGMfile "GMX.txt";
-##地震波文件
-set iGMdirection "1"; 
-##地震波方向，1代表X
-set iGMfact "0.276";  
-##地震波系数
-set dt 0.02;   
-##时间间隔
-foreach GMdirection $iGMdirection GMfile $iGMfile GMfact $iGMfact { 
-incr IDloadTag; 
-set GMfatt [expr 1*$iGMfact];  
-set AccelSeries "Series -dt $dt -filePath $iGMfile -factor  $GMfatt";
-pattern UniformExcitation  $IDloadTag  $GMdirection -accel  $AccelSeries; 
-}  
-  
-constraints Transformation; 
-numberer Plain;  
-system UmfPack; 
-test EnergyIncr 1.0e-4 200; 
-algorithm Newton 
-integrator Newmark 0.5 0.25 
-analysis Transient
-analyze 1000 0.02
+puts "gravity"
+## Load Case = DEAD
+pattern Plain 1 Linear {
+eleLoad -ele 9 -type -beamUniform 0 -1.200E+001 0
+eleLoad -ele 10 -type -beamUniform 0 -1.200E+001 0
+eleLoad -ele 11 -type -beamUniform 0 -1.200E+001 0
+eleLoad -ele 12 -type -beamUniform 0 -1.200E+001 0
+eleLoad -ele 13 -type -beamUniform 0 -1.200E+001 0
+eleLoad -ele 14 -type -beamUniform 0 -1.200E+001 0
+eleLoad -ele 15 -type -beamUniform 0 -1.200E+001 0
+eleLoad -ele 16 -type -beamUniform 0 -1.200E+001 0
+eleLoad -ele 17 -type -beamUniform 0 -1.200E+001 0
+eleLoad -ele 18 -type -beamUniform 0 -1.200E+001 0
+eleLoad -ele 39 -type -beamUniform 0 -1.200E+001 0
+eleLoad -ele 40 -type -beamUniform 0 -1.200E+001 0
+eleLoad -ele 41 -type -beamUniform 0 -1.200E+001 0
+eleLoad -ele 42 -type -beamUniform 0 -1.200E+001 0
+eleLoad -ele 43 -type -beamUniform 0 -1.200E+001 0
+eleLoad -ele 44 -type -beamUniform 0 -1.200E+001 0
+eleLoad -ele 45 -type -beamUniform 0 -1.200E+001 0
+eleLoad -ele 46 -type -beamUniform 0 -1.200E+001 0
+eleLoad -ele 47 -type -beamUniform 0 -1.200E+001 0
+eleLoad -ele 48 -type -beamUniform 0 -1.200E+001 0
+eleLoad -ele 69 -type -beamUniform 0 -1.200E+001 0
+eleLoad -ele 70 -type -beamUniform 0 -1.200E+001 0
+eleLoad -ele 71 -type -beamUniform 0 -1.200E+001 0
+eleLoad -ele 72 -type -beamUniform 0 -1.200E+001 0
+eleLoad -ele 73 -type -beamUniform 0 -1.200E+001 0
+eleLoad -ele 74 -type -beamUniform 0 -1.200E+001 0
+eleLoad -ele 75 -type -beamUniform 0 -1.200E+001 0
+eleLoad -ele 76 -type -beamUniform 0 -1.200E+001 0
+eleLoad -ele 77 -type -beamUniform 0 -1.200E+001 0
+eleLoad -ele 78 -type -beamUniform 0 -1.200E+001 0
+eleLoad -ele 99 -type -beamUniform 0 -1.200E+001 0
+eleLoad -ele 100 -type -beamUniform 0 -1.200E+001 0
+eleLoad -ele 101 -type -beamUniform 0 -1.200E+001 0
+eleLoad -ele 102 -type -beamUniform 0 -1.200E+001 0
+eleLoad -ele 103 -type -beamUniform 0 -1.200E+001 0
+eleLoad -ele 104 -type -beamUniform 0 -1.200E+001 0
+eleLoad -ele 105 -type -beamUniform 0 -1.200E+001 0
+eleLoad -ele 106 -type -beamUniform 0 -1.200E+001 0
+eleLoad -ele 107 -type -beamUniform 0 -1.200E+001 0
+eleLoad -ele 108 -type -beamUniform 0 -1.200E+001 0
+}
+puts "analysis"
+constraints Plain
+numberer Plain
+system BandGeneral
+test EnergyIncr 1.0e-6 200
+algorithm Newton
+integrator LoadControl 1.000E-001
+analysis Static
+analyze 10
+
+loadConst -time 0.0
+
+recorder Node -file node0.out -time -nodeRange 1 80 -dof 1 2 3 disp
+recorder Node -file node2.out -time -node 2 -dof 1 2 3 disp
+
+recorder Element -file ele79a.out -time -ele 79 localForce
+recorder Element -file ele79b.out -time -ele 79 section 1 deformation
+
+
+puts "pushover"
+## Load Case = PUSH
+pattern Plain 3 Linear {
+load 2 4.000E+005 0.000E+000 0.000E+000 0.000E+000 0.000E+000 0.000E+000
+load 4 4.000E+005 0.000E+000 0.000E+000 0.000E+000 0.000E+000 0.000E+000
+load 1 3.000E+005 0.000E+000 0.000E+000 0.000E+000 0.000E+000 0.000E+000
+load 3 3.000E+005 0.000E+000 0.000E+000 0.000E+000 0.000E+000 0.000E+000
+load 37 2.000E+005 0.000E+000 0.000E+000 0.000E+000 0.000E+000 0.000E+000
+load 38 2.000E+005 0.000E+000 0.000E+000 0.000E+000 0.000E+000 0.000E+000
+load 55 1.000E+005 0.000E+000 0.000E+000 0.000E+000 0.000E+000 0.000E+000
+load 56 1.000E+005 0.000E+000 0.000E+000 0.000E+000 0.000E+000 0.000E+000
+}
+puts "analysis"
+constraints Plain
+numberer Plain
+system BandGeneral
+test EnergyIncr 1.0e-6 200
+algorithm Newton
+integrator DisplacementControl 25 1 4
+analysis Static
+analyze 50
+
+integrator DisplacementControl 25 1 -8
+analyze 50
+integrator DisplacementControl 25 1 12
+analyze 50
+integrator DisplacementControl 25 1 -16
+analyze 50
